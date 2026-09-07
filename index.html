@@ -1,0 +1,2567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sumedha Chouhan — Product Designer</title>
+<meta name="description" content="Product designer with 4 years across B2B, AI and enterprise products. 0→1 product design, design systems, and interfaces that survive engineering. Dubai, UAE.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%2317150F'/%3E%3Ctext x='32' y='41' font-family='Georgia,serif' font-size='26' fill='%23F5F2EA' text-anchor='middle'%3ESC%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=IBM+Plex+Mono:ital,wght@0,400;0,500;1,400&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+
+<style>
+/* ============================================================
+   SUMEDHA CHOUHAN — PORTFOLIO
+   One file. No frameworks. Every diagram is hand-drawn SVG,
+   reconstructed and anonymized.
+   ============================================================ */
+
+:root{
+  --paper:#F5F2EA;
+  --paper-2:#EDE9DE;
+  --paper-3:#E4DFD1;
+  --ink:#17150F;
+  --ink-70:rgba(23,21,15,.74);
+  --ink-50:rgba(23,21,15,.54);
+  --ink-30:rgba(23,21,15,.30);
+  --line:rgba(23,21,15,.16);
+  --line-soft:rgba(23,21,15,.09);
+  --accent:#E8471C;
+  --accent-deep:#B93308;
+  --ok:#3E8E5F;
+  --dark:#111417;
+  --dark-2:#191D22;
+  --dark-3:#22272E;
+  --d-line:rgba(255,255,255,.10);
+  --d-line-2:rgba(255,255,255,.18);
+  --d-ink:#E9ECEF;
+  --d-dim:rgba(233,236,239,.55);
+  --serif:'Fraunces',Georgia,'Times New Roman',serif;
+  --sans:'Instrument Sans',-apple-system,'Helvetica Neue',Arial,sans-serif;
+  --mono:'IBM Plex Mono',ui-monospace,'SF Mono',Menlo,monospace;
+  --wrap:1240px;
+  --gutter:clamp(20px,4vw,56px);
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+html:focus-within{scroll-behavior:smooth}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--sans);
+  font-size:17px;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+  overflow-x:hidden;
+}
+/* paper grain */
+body::before{
+  content:"";position:fixed;inset:0;z-index:2000;pointer-events:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
+  mix-blend-mode:multiply;
+}
+::selection{background:var(--accent);color:var(--paper)}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
+img,svg{display:block;max-width:100%}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+
+.wrap{max-width:var(--wrap);margin:0 auto;padding-left:var(--gutter);padding-right:var(--gutter)}
+.m{font-family:var(--mono);font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--ink-50);font-weight:500}
+.m--ink{color:var(--ink)}
+.m--accent{color:var(--accent-deep)}
+em.t{font-family:var(--serif);font-style:italic;font-weight:400}
+
+/* ---------- progress + nav ---------- */
+#progress{position:fixed;top:0;left:0;height:2px;width:0;background:var(--accent);z-index:1200;transition:width .1s linear}
+nav.top{
+  position:fixed;top:0;left:0;right:0;z-index:1100;
+  background:color-mix(in srgb,var(--paper) 88%,transparent);
+  -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line-soft);
+}
+nav.top .bar{display:flex;align-items:center;justify-content:space-between;height:64px;gap:24px}
+.brand{display:flex;align-items:baseline;gap:10px;flex-shrink:0}
+.brand .name{font-family:var(--mono);font-size:12px;letter-spacing:.2em;font-weight:500}
+.brand .dot{width:6px;height:6px;background:var(--accent);border-radius:50%;display:inline-block;transform:translateY(-2px)}
+.navlinks{display:flex;align-items:center;gap:clamp(14px,2.4vw,32px)}
+.navlinks a{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-70);padding:6px 2px;position:relative;white-space:nowrap}
+.navlinks a::after{content:"";position:absolute;left:0;right:100%;bottom:0;height:1px;background:var(--ink);transition:right .25s cubic-bezier(.7,0,.2,1)}
+.navlinks a:hover::after,.navlinks a.on::after{right:0}
+.navlinks a.on{color:var(--ink)}
+.navlinks a.res{color:var(--accent-deep)}
+
+/* ---------- left rail (home) ---------- */
+.rail{position:fixed;left:22px;top:50%;transform:translateY(-50%);z-index:900;display:flex;flex-direction:column;gap:14px}
+.rail a{display:flex;align-items:center;gap:10px;font-family:var(--mono);font-size:9.5px;letter-spacing:.18em;color:var(--ink-30);text-transform:uppercase;transition:color .25s}
+.rail a::before{content:"";width:14px;height:1px;background:currentColor;transition:width .25s}
+.rail a.on{color:var(--ink)}
+.rail a.on::before{width:26px;background:var(--accent)}
+body:not([data-view=home]) .rail{display:none}
+
+/* ---------- views ---------- */
+main{padding-top:64px}
+.view{display:none}
+.view.active{display:block;animation:viewIn .5s cubic-bezier(.2,.6,.2,1) both}
+@keyframes viewIn{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+
+/* ---------- reveal ---------- */
+.rv{opacity:0;transform:translateY(22px);transition:opacity .7s cubic-bezier(.2,.6,.2,1),transform .7s cubic-bezier(.2,.6,.2,1)}
+.rv.in{opacity:1;transform:none}
+.rv-d1{transition-delay:.08s}.rv-d2{transition-delay:.16s}.rv-d3{transition-delay:.24s}.rv-d4{transition-delay:.32s}
+
+/* ---------- hero ---------- */
+.hero{position:relative;padding:clamp(64px,9vh,110px) 0 0;overflow:hidden}
+.hero::before{ /* faint drafting grid */
+  content:"";position:absolute;inset:0;
+  background-image:linear-gradient(var(--line-soft) 1px,transparent 1px),linear-gradient(90deg,var(--line-soft) 1px,transparent 1px);
+  background-size:72px 72px;
+  -webkit-mask-image:radial-gradient(120% 90% at 70% 0%,#000 30%,transparent 75%);
+  mask-image:radial-gradient(120% 90% at 70% 0%,#000 30%,transparent 75%);
+}
+.hero .wrap{position:relative}
+.hero-top{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:clamp(28px,4vh,52px)}
+.status{display:inline-flex;align-items:center;gap:8px}
+.status .pulse{width:7px;height:7px;border-radius:50%;background:var(--ok);position:relative}
+.status .pulse::after{content:"";position:absolute;inset:-4px;border-radius:50%;border:1px solid var(--ok);animation:pulse 2.2s ease-out infinite}
+@keyframes pulse{0%{transform:scale(.4);opacity:1}80%,100%{transform:scale(1.4);opacity:0}}
+h1.display{
+  font-family:var(--serif);font-weight:390;
+  font-size:clamp(46px,8.4vw,118px);
+  line-height:.98;letter-spacing:-.015em;
+  max-width:15ch;
+}
+h1.display .frag{display:inline-block;white-space:nowrap;font-style:italic;font-weight:340}
+h1.display .frag span{display:inline-block}
+/* scattered letters — the word performs its meaning */
+h1.display .frag span:nth-child(1){transform:translate(-3px,4px) rotate(-5deg)}
+h1.display .frag span:nth-child(2){transform:translate(1px,-3px) rotate(3deg)}
+h1.display .frag span:nth-child(3){transform:translate(4px,2px) rotate(-2deg)}
+h1.display .frag span:nth-child(4){transform:translate(-2px,-4px) rotate(6deg);color:var(--accent-deep)}
+h1.display .frag span:nth-child(5){transform:translate(3px,5px) rotate(-7deg)}
+h1.display .frag span:nth-child(6){transform:translate(-4px,1px) rotate(2deg)}
+h1.display .frag span:nth-child(7){transform:translate(2px,-5px) rotate(-3deg)}
+h1.display .frag span:nth-child(8){transform:translate(5px,3px) rotate(5deg)}
+h1.display .frag span:nth-child(9){transform:translate(-1px,-2px) rotate(-4deg)}
+h1.display .frag span:nth-child(10){transform:translate(3px,4px) rotate(3deg)}
+h1.display .clearw{white-space:nowrap;position:relative}
+h1.display .clearw .clr{
+  background-image:linear-gradient(var(--accent),var(--accent));
+  background-repeat:no-repeat;background-size:100% .045em;background-position:0 88%;
+  animation:drawUL 1.1s .9s cubic-bezier(.7,0,.2,1) both;
+}
+@keyframes drawUL{from{background-size:0% .045em}to{background-size:100% .045em}}
+.hero-sub{max-width:56ch;margin-top:clamp(22px,3.5vh,40px);font-size:clamp(17px,1.5vw,20px);line-height:1.6;color:var(--ink-70)}
+.hero-sub strong{color:var(--ink);font-weight:600}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:clamp(26px,4vh,44px)}
+
+.btn{display:inline-flex;align-items:center;gap:10px;font-family:var(--mono);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;padding:15px 26px;border:1px solid var(--ink);transition:all .25s cubic-bezier(.2,.6,.2,1)}
+.btn .arw{transition:transform .25s}
+.btn:hover .arw{transform:translateX(4px)}
+.btn--solid{background:var(--ink);color:var(--paper)}
+.btn--solid:hover{background:var(--accent);border-color:var(--accent)}
+.btn--ghost:hover{background:var(--ink);color:var(--paper)}
+.btn--sm{padding:11px 18px;font-size:10.5px}
+
+/* convergence figure */
+.conv{margin-top:clamp(40px,7vh,84px);border-top:1px solid var(--line);position:relative}
+.conv svg{width:100%;height:auto}
+.conv .ghost{opacity:0;animation:ghostIn .7s cubic-bezier(.2,.6,.2,1) forwards}
+.conv .ghost:nth-of-type(2){animation-delay:.15s}
+.conv .ghost:nth-of-type(3){animation-delay:.3s}
+.conv .ghost:nth-of-type(4){animation-delay:.45s}
+.conv .ghost:nth-of-type(5){animation-delay:.6s}
+.conv .ghost:nth-of-type(6){animation-delay:.75s}
+@keyframes ghostIn{from{opacity:0;transform:translateX(-14px)}to{opacity:1;transform:none}}
+.conv .flow{stroke-dasharray:5 7;animation:flow 1.6s linear infinite}
+@keyframes flow{to{stroke-dashoffset:-24}}
+.conv .hubpop{transform-origin:830px 212px;transform-box:view-box;animation:pop .8s .85s cubic-bezier(.34,1.4,.4,1) both}
+@keyframes pop{from{opacity:0;transform:scale(.6)}to{opacity:1;transform:scale(1)}}
+.conv .metaR{opacity:0;animation:metaIn .6s 1.5s forwards}
+.conv .metaR2{animation-delay:1.65s}.conv .metaR3{animation-delay:1.8s}
+@keyframes metaIn{to{opacity:1}}
+.conv .gfloat{animation:gfloat 6s ease-in-out infinite alternate}
+.conv .gfloat2{animation:gfloat 7s .8s ease-in-out infinite alternate}
+@keyframes gfloat{from{transform:translateY(-3px)}to{transform:translateY(3px)}}
+.scrollcue{display:flex;justify-content:space-between;align-items:center;padding:14px 0 18px;border-top:1px solid var(--line)}
+.scrollcue .down{animation:bob 2s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(5px)}}
+
+/* ---------- ticker ---------- */
+.ticker{border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);overflow:hidden;background:var(--paper-2)}
+.ticker-track{display:flex;width:max-content;animation:tick 36s linear infinite;will-change:transform}
+.ticker:hover .ticker-track{animation-play-state:paused}
+.ticker-track span{font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;padding:13px 0;white-space:nowrap;color:var(--ink-70)}
+.ticker-track b{color:var(--accent);font-weight:500;padding:0 18px}
+@keyframes tick{to{transform:translateX(-50%)}}
+
+/* ---------- sections ---------- */
+.sec{padding:clamp(72px,11vh,140px) 0}
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-bottom:clamp(36px,6vh,72px)}
+.sec-head .idx{font-family:var(--mono);font-size:11px;letter-spacing:.18em;color:var(--accent-deep);display:block;margin-bottom:14px}
+.sec-head h2{font-family:var(--serif);font-weight:400;font-size:clamp(32px,4.4vw,58px);line-height:1.04;letter-spacing:-.01em}
+.sec-head .lead{max-width:38ch;color:var(--ink-70);font-size:16px}
+.hr{border:none;border-top:1px solid var(--line)}
+.num-big{font-family:var(--serif);font-weight:340;font-size:clamp(40px,5vw,72px);line-height:1;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+
+/* ---------- pull quote ---------- */
+.pull{position:relative;padding:clamp(28px,4vw,44px) 0;padding-left:clamp(24px,3.5vw,48px);border-top:1px solid var(--ink);border-bottom:1px solid var(--line);font-family:var(--serif);font-weight:390;font-size:clamp(21px,2.6vw,32px);line-height:1.35;letter-spacing:-.005em}
+.pull::before{content:"";position:absolute;left:0;top:-1px;bottom:0;width:3px;background:var(--accent)}
+.pull .q{color:var(--ink-50)}
+
+/* ---------- figure frames ---------- */
+.fig{position:relative;border:1px solid var(--line);background:var(--paper-2)}
+.fig::before,.fig::after{content:"";position:absolute;width:14px;height:14px;pointer-events:none}
+.fig::before{top:-1px;left:-1px;border-top:2px solid var(--ink);border-left:2px solid var(--ink)}
+.fig::after{bottom:-1px;right:-1px;border-bottom:2px solid var(--ink);border-right:2px solid var(--ink)}
+.fig-cap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;padding:10px 14px;border-top:1px solid var(--line);font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-50)}
+.fig-cap b{color:var(--accent-deep);font-weight:500}
+
+/* dark product panel */
+.ui-dark{background:var(--dark);color:var(--d-ink);border:1px solid var(--d-line)}
+.ui-dark .fig-cap{border-top:1px solid var(--d-line);color:var(--d-dim)}
+
+/* ---------- stats ---------- */
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));border:1px solid var(--ink)}
+.stat{padding:26px 22px;border-right:1px solid var(--line);position:relative}
+.stat:last-child{border-right:none}
+.stat .lbl{margin-top:10px;display:block;line-height:1.5}
+.stat.hot .num-big{color:var(--accent-deep)}
+
+/* ---------- work rows ---------- */
+.work-row{display:grid;grid-template-columns:110px 1fr 380px;gap:clamp(24px,4vw,60px);align-items:center;padding:clamp(36px,6vh,64px) 0;border-top:1px solid var(--line);position:relative;transition:background .3s}
+.work-row:last-of-type{border-bottom:1px solid var(--line)}
+.work-row .w-idx{font-family:var(--mono);font-size:12px;letter-spacing:.14em;color:var(--ink-50);align-self:start;padding-top:8px}
+.work-row .w-idx .yr{display:block;margin-top:6px;color:var(--ink-30)}
+.work-row h3{font-family:var(--serif);font-weight:400;font-size:clamp(28px,3.4vw,46px);line-height:1.05;letter-spacing:-.01em;margin:12px 0 14px;transition:color .25s}
+.work-row .w-line{font-size:clamp(16px,1.35vw,19px);color:var(--ink-70);max-width:52ch}
+.work-row .w-tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}
+.tag{font-family:var(--mono);font-size:9.5px;letter-spacing:.13em;text-transform:uppercase;border:1px solid var(--line);padding:5px 10px;color:var(--ink-70)}
+.work-row .w-open{display:inline-flex;align-items:center;gap:8px;margin-top:24px;font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent-deep)}
+.work-row .w-open .arw{transition:transform .25s}
+.work-row:hover{background:var(--paper-2)}
+.work-row:hover h3{color:var(--accent-deep)}
+.work-row:hover .w-open .arw{transform:translateX(6px)}
+.w-fig{position:relative;overflow:hidden}
+.w-fig svg,.w-fig .ph{transition:transform .6s cubic-bezier(.2,.6,.2,1)}
+.work-row:hover .w-fig svg,.work-row:hover .w-fig .ph{transform:translateY(-6px)}
+
+/* phones (HTML mocks) */
+.phones{display:flex;gap:14px;justify-content:center;padding:26px 14px;background:var(--paper-3)}
+.phone{width:158px;height:318px;border-radius:24px;background:var(--dark);padding:8px;flex-shrink:0;position:relative;box-shadow:0 12px 28px rgba(23,21,15,.18)}
+.phone .scr{background:#F7F5EF;border-radius:17px;height:100%;overflow:hidden;display:flex;flex-direction:column;position:relative}
+.phone .notch{position:absolute;top:14px;left:50%;transform:translateX(-50%);width:44px;height:5px;border-radius:3px;background:rgba(23,21,15,.15);z-index:2}
+.ph-status{display:flex;justify-content:space-between;padding:8px 12px 4px;font-family:var(--mono);font-size:7.5px;color:rgba(23,21,15,.5)}
+.ph-head{padding:10px 12px 8px;font-weight:600;font-size:12.5px;line-height:1.25}
+.ph-head small{display:block;font-family:var(--mono);font-size:7px;letter-spacing:.1em;text-transform:uppercase;color:rgba(23,21,15,.45);margin-top:2px}
+.ph-card{margin:6px 10px;background:#fff;border:1px solid rgba(23,21,15,.08);border-radius:10px;padding:9px 10px;font-size:9.5px;color:rgba(23,21,15,.75)}
+.ph-card b{display:block;font-size:10.5px;color:var(--ink)}
+.ph-card .row{display:flex;justify-content:space-between;align-items:center;margin-top:4px}
+.pill{font-family:var(--mono);font-size:6.5px;letter-spacing:.08em;text-transform:uppercase;padding:2.5px 6px;border-radius:20px}
+.pill.ok{background:rgba(62,142,95,.14);color:#2C6B46}
+.pill.warn{background:rgba(232,71,28,.12);color:var(--accent-deep)}
+.pill.mut{background:rgba(23,21,15,.07);color:rgba(23,21,15,.55)}
+.ph-cta{margin:auto 10px 10px;background:var(--ink);color:#F7F5EF;text-align:center;border-radius:9px;padding:9px;font-size:9.5px;font-weight:600;letter-spacing:.04em}
+.ph-cta.acc{background:var(--accent)}
+.ph-nav{display:flex;border-top:1px solid rgba(23,21,15,.08);background:#fff}
+.ph-nav i{flex:1;text-align:center;padding:7px 0;font-style:normal;font-family:var(--mono);font-size:6.5px;letter-spacing:.06em;color:rgba(23,21,15,.4);text-transform:uppercase}
+.ph-nav i.on{color:var(--accent-deep)}
+.ph-bars{display:flex;flex-direction:column;gap:5px;padding:9px 10px}
+.ph-bars i{height:6px;border-radius:3px;background:rgba(23,21,15,.10)}
+.ph-bars i:nth-child(2){width:72%}.ph-bars i:nth-child(3){width:45%}
+
+/* ---------- visual teaser ---------- */
+.viz-grid{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--ink)}
+.viz-cell{padding:26px 22px 22px;border-right:1px solid var(--line);position:relative;min-height:190px;display:flex;flex-direction:column;transition:background .3s}
+.viz-cell:last-child{border-right:none}
+.viz-cell .n{font-family:var(--mono);font-size:10px;letter-spacing:.14em;color:var(--accent-deep)}
+.viz-cell h4{font-family:var(--serif);font-weight:420;font-size:22px;margin:12px 0 8px}
+.viz-cell p{font-size:14px;color:var(--ink-70);line-height:1.55}
+.viz-cell .arw{margin-top:auto;padding-top:16px;font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-50)}
+.viz-cell:hover{background:var(--paper-2)}
+
+/* ---------- about ---------- */
+.about-grid{display:grid;grid-template-columns:5fr 7fr;gap:clamp(32px,6vw,90px)}
+.about-grid .story p{margin-bottom:1.2em;color:var(--ink-70);font-size:clamp(16px,1.3vw,18.5px)}
+.about-grid .story p b{color:var(--ink);font-weight:600}
+.timeline{list-style:none}
+.timeline li{display:grid;grid-template-columns:96px 20px 1fr;gap:14px;padding:20px 0;border-bottom:1px solid var(--line-soft)}
+.timeline .t-yr{font-family:var(--mono);font-size:11px;letter-spacing:.1em;color:var(--accent-deep);padding-top:4px}
+.timeline .t-node{position:relative}
+.timeline .t-node::before{content:"";position:absolute;left:50%;top:6px;transform:translateX(-50%);width:9px;height:9px;border-radius:50%;border:2px solid var(--ink);background:var(--paper)}
+.timeline li:first-child .t-node::before{background:var(--accent);border-color:var(--accent)}
+.timeline .t-node::after{content:"";position:absolute;left:50%;top:18px;bottom:-26px;width:1px;background:var(--line)}
+.timeline li:last-child .t-node::after{display:none}
+.timeline b{font-size:16.5px;display:block}
+.timeline span{font-size:14.5px;color:var(--ink-70)}
+
+.whatido{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--ink);margin-top:clamp(40px,7vh,80px)}
+.wi{padding:26px 22px;border-right:1px solid var(--line)}
+.wi:last-child{border-right:none}
+.wi .m{display:block;margin-bottom:14px;color:var(--accent-deep)}
+.wi h4{font-family:var(--serif);font-weight:420;font-size:21px;margin-bottom:10px}
+.wi p{font-size:14px;color:var(--ink-70);line-height:1.6}
+
+/* ---------- process ---------- */
+.proc{display:grid;grid-template-columns:repeat(5,1fr);counter-reset:step}
+.proc .step{padding:26px 20px 30px;border:1px solid var(--line);border-left:none;position:relative;transition:background .3s,transform .3s}
+.proc .step:first-child{border-left:1px solid var(--line)}
+.proc .step::before{counter-increment:step;content:"0" counter(step);font-family:var(--mono);font-size:11px;letter-spacing:.14em;color:var(--accent-deep)}
+.proc .step h4{font-family:var(--serif);font-weight:420;font-size:22px;margin:14px 0 8px}
+.proc .step p{font-size:13.5px;color:var(--ink-70);line-height:1.55}
+.proc .step::after{content:"→";position:absolute;right:-11px;top:32px;z-index:2;background:var(--paper);padding:2px 0;color:var(--ink);font-size:14px}
+.proc .step:last-child::after{display:none}
+.proc .step:hover{background:var(--paper-2);transform:translateY(-4px)}
+
+/* ---------- footer / contact ---------- */
+footer{background:var(--ink);color:var(--paper);margin-top:clamp(40px,8vh,90px)}
+footer .f-in{padding:clamp(72px,12vh,150px) 0 0}
+footer .k{color:rgba(245,242,234,.5)}
+footer h2.big{font-family:var(--serif);font-weight:380;font-size:clamp(44px,7.6vw,110px);line-height:1;letter-spacing:-.015em;margin:18px 0 8px}
+footer h2.big em{font-style:italic;font-weight:340;color:#FF6B3D}
+.f-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:clamp(28px,4vw,60px);margin-top:clamp(40px,7vh,80px);padding-bottom:clamp(40px,7vh,72px)}
+.f-grid h5{font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:rgba(245,242,234,.45);margin-bottom:16px;font-weight:500}
+.f-grid p{color:rgba(245,242,234,.75);font-size:15.5px;max-width:36ch}
+.f-list{list-style:none}
+.f-list li{margin-bottom:12px}
+.f-list a,.f-list button{color:rgba(245,242,234,.85);font-size:15.5px;display:inline-flex;gap:10px;align-items:baseline;border-bottom:1px solid transparent;transition:.25s}
+.f-list a:hover,.f-list button:hover{color:#FF6B3D;border-color:#FF6B3D}
+.copybtn{font-family:var(--sans)}
+.copybtn.ok{color:#7CC79B!important}
+.colophon{border-top:1px solid rgba(245,242,234,.14);padding:22px 0 26px;display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:rgba(245,242,234,.4)}
+
+/* ============================================================
+   CASE STUDY SHARED
+   ============================================================ */
+.cs-hero{padding:clamp(48px,8vh,96px) 0 0}
+.cs-hero .tags{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0 26px}
+.cs-hero h1{font-family:var(--serif);font-weight:390;font-size:clamp(46px,8vw,104px);line-height:.98;letter-spacing:-.015em}
+.cs-hero .sub{font-family:var(--serif);font-style:italic;font-weight:380;font-size:clamp(19px,2.4vw,28px);color:var(--ink-70);margin-top:18px;max-width:30ch;line-height:1.35}
+.meta-grid{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--ink);margin-top:clamp(32px,5vh,56px)}
+.meta-grid>div{padding:18px 20px;border-right:1px solid var(--line)}
+.meta-grid>div:last-child{border-right:none}
+.meta-grid .m{display:block;margin-bottom:8px}
+.meta-grid p{font-size:14.5px;line-height:1.5}
+.conf{display:flex;gap:16px;align-items:flex-start;border:1px dashed var(--ink-30);padding:18px 20px;margin-top:26px}
+.conf .sym{font-family:var(--mono);font-size:10px;letter-spacing:.1em;border:1px solid var(--ink);padding:4px 8px;flex-shrink:0}
+.conf p{font-size:14px;color:var(--ink-70);line-height:1.6}
+
+.cs-sec{padding:clamp(56px,9vh,110px) 0}
+.cs-sec+.cs-sec{border-top:1px solid var(--line)}
+.cs-num{display:flex;align-items:baseline;gap:18px;margin-bottom:clamp(20px,3vh,34px)}
+.cs-num .n{font-family:var(--mono);font-size:11px;letter-spacing:.16em;color:var(--accent-deep)}
+.cs-num h2{font-family:var(--serif);font-weight:400;font-size:clamp(28px,3.8vw,50px);line-height:1.06;letter-spacing:-.01em}
+.cs-body{display:grid;grid-template-columns:7fr 4fr;gap:clamp(28px,5vw,80px);align-items:start}
+.cs-body .txt p{color:var(--ink-70);margin-bottom:1.1em;max-width:62ch}
+.cs-body .txt p b{color:var(--ink);font-weight:600}
+.cs-body .aside .m{display:block;margin-bottom:12px}
+.cs-body .aside ul{list-style:none}
+.cs-body .aside li{padding:10px 0;border-bottom:1px solid var(--line-soft);font-size:14px;color:var(--ink-70);display:flex;gap:10px}
+.cs-body .aside li::before{content:"—";color:var(--accent)}
+.cols2{display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,3vw,44px)}
+.cols3{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(20px,3vw,44px)}
+.defs{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line)}
+.defs>div{background:var(--paper);padding:20px 22px}
+.defs h5{font-family:var(--mono);font-size:10.5px;letter-spacing:.15em;text-transform:uppercase;color:var(--accent-deep);margin-bottom:8px}
+.defs p{font-size:14px;color:var(--ink-70);line-height:1.55}
+
+/* system map */
+.sysmap svg{width:100%;height:auto}
+.sysmap .node circle{fill:var(--paper);stroke:var(--ink);stroke-width:1.2;transition:.25s;cursor:pointer}
+.sysmap .node rect{fill:var(--paper-2);stroke:var(--ink);stroke-width:1;transition:.25s;cursor:pointer}
+.sysmap .node text{font-family:var(--mono);font-size:9.5px;letter-spacing:.08em;fill:var(--ink);text-transform:uppercase;pointer-events:none}
+.sysmap .link{stroke:var(--ink-30);stroke-width:1.1;fill:none;transition:.25s}
+.sysmap .link.dsh{stroke-dasharray:4 5}
+.sysmap .lk-lbl{font-family:var(--mono);font-size:8px;letter-spacing:.08em;fill:var(--ink-50);text-transform:uppercase}
+.sysmap.focused .node:not(.lit){opacity:.22}
+.sysmap.focused .link:not(.lit){opacity:.12}
+.sysmap .node.lit circle,.sysmap .node.lit rect{stroke:var(--accent);stroke-width:1.8}
+.sysmap .link.lit{stroke:var(--accent);stroke-width:1.6}
+.sysmap .node .ndot{fill:var(--accent)}
+.map-cap{border:1px solid var(--line);border-top:none;padding:14px 18px;font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:var(--ink-70);min-height:48px;background:var(--paper-2)}
+.map-cap b{color:var(--accent-deep);font-weight:500}
+
+/* hierarchy chain */
+.chain{display:flex;align-items:stretch;gap:0;flex-wrap:wrap}
+.chain .cnode{flex:1;min-width:120px;border:1px solid var(--ink);margin-right:34px;position:relative;padding:16px 14px;background:var(--paper)}
+.chain .cnode:last-child{margin-right:0;background:var(--ink);color:var(--paper)}
+.chain .cnode::after{content:"→";position:absolute;right:-27px;top:50%;transform:translateY(-50%);color:var(--accent);font-size:17px}
+.chain .cnode:last-child::after{display:none}
+.chain .cnode b{display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase}
+.chain .cnode span{display:block;font-size:12.5px;color:var(--ink-50);margin-top:5px}
+.chain .cnode:last-child span{color:rgba(245,242,234,.6)}
+
+/* event demo */
+.evdemo{border:1px solid var(--ink);background:var(--dark);color:var(--d-ink)}
+.evd-bar{display:flex;justify-content:space-between;align-items:center;padding:14px 18px;border-bottom:1px solid var(--d-line);flex-wrap:wrap;gap:10px}
+.evd-bar .ttl{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--d-dim)}
+.evd-bar .ttl b{color:var(--d-ink);font-weight:500}
+.evd-search{display:flex;align-items:center;gap:8px;border:1px solid var(--d-line-2);padding:7px 12px;background:var(--dark-2)}
+.evd-search input{background:none;border:none;color:var(--d-ink);font-family:var(--mono);font-size:12px;width:170px;outline:none}
+.evd-search input::placeholder{color:var(--d-dim)}
+.evd-filters{display:flex;gap:22px;flex-wrap:wrap;padding:14px 18px;border-bottom:1px solid var(--d-line)}
+.evd-group .glbl{font-family:var(--mono);font-size:8.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--d-dim);display:block;margin-bottom:8px}
+.evd-chips{display:flex;gap:6px;flex-wrap:wrap}
+.evd-chip{font-family:var(--mono);font-size:10px;letter-spacing:.06em;padding:5px 11px;border:1px solid var(--d-line-2);border-radius:20px;color:var(--d-dim);transition:.2s;text-transform:uppercase}
+.evd-chip:hover{border-color:var(--d-ink);color:var(--d-ink)}
+.evd-chip.on{background:var(--accent);border-color:var(--accent);color:#fff}
+.evd-count{padding:10px 18px;font-family:var(--mono);font-size:10px;letter-spacing:.14em;color:var(--d-dim);border-bottom:1px solid var(--d-line);text-transform:uppercase}
+.evd-count b{color:var(--accent);font-weight:500}
+.evd-rows{min-height:300px}
+.evd-row{display:grid;grid-template-columns:96px 1.2fr 1fr 1fr 90px 86px;gap:12px;align-items:center;padding:11px 18px;border-bottom:1px solid rgba(255,255,255,.05);font-size:12.5px;transition:background .15s;animation:rowIn .35s both}
+.evd-row:hover{background:var(--dark-2)}
+@keyframes rowIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.evd-row .eid{font-family:var(--mono);font-size:10.5px;color:var(--d-dim)}
+.evd-row .ecam{font-weight:600;font-size:12.5px}
+.evd-row .eapp,.evd-row .etyp{font-family:var(--mono);font-size:10px;letter-spacing:.06em;color:var(--d-dim);text-transform:uppercase}
+.evd-row .etyp i{font-style:normal;display:inline-flex;align-items:center;justify-content:center;width:16px;height:16px;border-radius:3px;margin-right:7px;background:rgba(255,255,255,.08);font-size:8px;vertical-align:middle}
+.evd-row .etyp i.v{background:rgba(93,140,255,.22);color:#9DB9FF}
+.evd-row .etyp i.p{background:rgba(232,71,28,.2);color:#FF8A66}
+.evd-row .etyp i.o{background:rgba(229,165,10,.2);color:#EDC65C}
+.evd-row .etme{font-family:var(--mono);font-size:10.5px;color:var(--d-dim);text-align:right}
+.st{font-family:var(--mono);font-size:8.5px;letter-spacing:.1em;text-transform:uppercase;padding:3px 8px;border-radius:12px;display:inline-block}
+.st.new{background:rgba(232,71,28,.16);color:#FF8A66}
+.st.ack{background:rgba(93,140,255,.15);color:#9DB9FF}
+.st.res{background:rgba(62,142,95,.16);color:#7CC79B}
+.evd-empty{padding:56px 24px;text-align:center;display:none}
+.evd-empty .box{width:46px;height:46px;margin:0 auto 16px;border:1px dashed var(--d-line-2);border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--d-dim);font-size:18px}
+.evd-empty p{color:var(--d-dim);font-size:13.5px;max-width:34ch;margin:0 auto 18px}
+.evd-load{display:none;padding:8px 18px}
+.evd-load i{display:block;height:34px;margin-top:6px;background:linear-gradient(90deg,var(--dark-2) 25%,var(--dark-3) 50%,var(--dark-2) 75%);background-size:200% 100%;animation:shim .9s linear infinite;border-radius:4px}
+@keyframes shim{to{background-position:-200% 0}}
+.evdemo.has-empty .evd-empty{display:block}
+.evdemo.is-loading .evd-load{display:block}
+.evdemo.is-loading .evd-rows .evd-row{display:none}
+.demo-note{display:flex;gap:14px;align-items:baseline;padding:13px 18px;border-top:1px solid var(--d-line);font-family:var(--mono);font-size:10px;letter-spacing:.08em;color:var(--d-dim);text-transform:uppercase;flex-wrap:wrap}
+.demo-note b{color:var(--accent);font-weight:500}
+
+/* annotated table */
+.ant{display:grid;grid-template-columns:7fr 4fr;gap:clamp(22px,3vw,44px);align-items:start}
+.dtable{width:100%;border-collapse:collapse;font-size:12.5px}
+.dtable th{font-family:var(--mono);font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--d-dim);text-align:left;padding:12px 14px;border-bottom:1px solid var(--d-line-2)}
+.dtable td{padding:12px 14px;border-bottom:1px solid var(--d-line);color:var(--d-ink)}
+.dtable td.mono{font-family:var(--mono);font-size:10.5px;color:var(--d-dim)}
+.dtable tr:hover td{background:var(--dark-2)}
+.zone{transition:.25s;border-radius:3px}
+.zone.hl-a,.zone.hl-b,.zone.hl-c,.zone.hl-d{box-shadow:inset 0 0 0 1.5px var(--accent);background:rgba(232,71,28,.08)!important}
+.ant-list{list-style:none}
+.ant-list li{padding:16px 4px;border-bottom:1px solid var(--line);display:flex;gap:16px;cursor:pointer;transition:.2s}
+.ant-list li:first-child{border-top:1px solid var(--line)}
+.ant-list .an-n{font-family:var(--mono);font-size:10.5px;color:var(--accent-deep);border:1px solid currentColor;width:26px;height:26px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0}
+.ant-list b{display:block;font-size:15px}
+.ant-list span{font-size:13.5px;color:var(--ink-70)}
+.ant-list li:hover,.ant-list li.on{background:var(--paper-2)}
+
+/* stepper */
+.stepper{display:grid;grid-template-columns:repeat(8,1fr);position:relative;counter-reset:st}
+.stepper::before{content:"";position:absolute;top:17px;left:6%;right:6%;height:1px;background:var(--ink-30)}
+.stepper .st8{position:relative;padding:0 8px;text-align:center;transition:transform .25s}
+.stepper .st8::before{counter-increment:st;content:counter(st);position:absolute;top:0;left:50%;transform:translateX(-50%);width:34px;height:34px;border-radius:50%;background:var(--paper);border:1px solid var(--ink);font-family:var(--mono);font-size:11px;display:flex;align-items:center;justify-content:center;transition:.25s}
+.stepper .st8 b{display:block;margin-top:46px;font-family:var(--mono);font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;line-height:1.5}
+.stepper .st8 span{display:block;font-size:11px;color:var(--ink-50);line-height:1.45;margin-top:4px}
+.stepper .st8:hover{transform:translateY(-5px)}
+.stepper .st8:hover::before{background:var(--accent);border-color:var(--accent);color:#fff}
+.stepper .st8.key::before{background:var(--ink);color:var(--paper)}
+
+/* ds stack */
+.dsstack{display:flex;flex-direction:column;gap:10px;align-items:center}
+.dslayer{border:1px solid var(--ink);background:var(--paper);padding:16px 26px;cursor:pointer;text-align:center;transition:.3s;position:relative;width:100%}
+.dslayer .l-t{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase}
+.dslayer .l-s{font-size:12px;color:var(--ink-50);display:block;margin-top:3px}
+.dslayer:hover{background:var(--paper-2)}
+.dslayer.open{background:var(--ink);color:var(--paper)}
+.dslayer.open .l-s{color:rgba(245,242,234,.55)}
+.dslayer .items{display:none;justify-content:center;gap:8px;flex-wrap:wrap;margin-top:14px}
+.dslayer.open .items{display:flex}
+.dslayer .items i{font-style:normal;font-family:var(--mono);font-size:9px;letter-spacing:.1em;text-transform:uppercase;border:1px solid rgba(245,242,234,.3);padding:4px 10px;border-radius:14px;color:rgba(245,242,234,.8)}
+.dsw-1{max-width:56%}.dsw-2{max-width:67%}.dsw-3{max-width:78%}.dsw-4{max-width:89%}.dsw-5{max-width:100%}
+.dsw-5{border-color:var(--accent)}
+.dsw-5 .l-t{color:var(--accent-deep)}
+.dslayer.open.dsw-5{background:var(--accent);border-color:var(--accent);color:#fff}
+.dslayer.open.dsw-5 .l-t{color:#fff}
+
+/* before/after detail cards */
+.dt-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.dt-card{background:var(--paper);padding:24px;min-height:210px;display:flex;flex-direction:column}
+.dt-card h4{font-family:var(--serif);font-weight:430;font-size:20px;margin:10px 0 4px}
+.dt-switch{display:inline-flex;border:1px solid var(--ink);width:max-content;font-family:var(--mono);font-size:9px;letter-spacing:.12em;text-transform:uppercase}
+.dt-switch button{padding:6px 13px;color:var(--ink-50)}
+.dt-switch button.on{background:var(--ink);color:var(--paper)}
+.dt-card .dt-txt{margin-top:14px;font-size:14px;color:var(--ink-70);line-height:1.6}
+.dt-card .dt-aft{display:none;font-size:14px;color:var(--ink);line-height:1.6}
+.dt-card[data-state=after] .dt-bfr{display:none}
+.dt-card[data-state=after] .dt-aft{display:block}
+.dt-card[data-state=after]{background:var(--paper-2)}
+.dt-card .aft-badge{display:none;font-family:var(--mono);font-size:8.5px;letter-spacing:.12em;color:var(--ok);margin-top:auto;padding-top:14px;text-transform:uppercase}
+.dt-card[data-state=after] .aft-badge{display:block}
+
+/* impact + learnings */
+.learn{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--ink)}
+.learn>div{background:var(--paper);padding:clamp(24px,3vw,40px)}
+.learn .n{font-family:var(--mono);font-size:11px;color:var(--accent-deep);letter-spacing:.14em}
+.learn h4{font-family:var(--serif);font-weight:400;font-size:clamp(19px,1.8vw,25px);margin:12px 0 10px;line-height:1.3}
+.learn p{font-size:14.5px;color:var(--ink-70)}
+
+.next-proj{display:block;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);padding:clamp(36px,6vh,64px) 0;transition:background .3s}
+.next-proj:hover{background:var(--paper-2)}
+.next-proj .inner{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+.next-proj h3{font-family:var(--serif);font-weight:390;font-size:clamp(30px,4.6vw,60px);letter-spacing:-.01em}
+.next-proj:hover h3{color:var(--accent-deep)}
+.next-proj .arw-big{font-size:clamp(28px,4vw,48px);transition:transform .3s}
+.next-proj:hover .arw-big{transform:translateX(12px);color:var(--accent-deep)}
+
+/* bike split */
+.split{display:grid;grid-template-columns:1fr 1px 1fr;border:1px solid var(--ink)}
+.split .mid{background:var(--ink);position:relative}
+.split .mid span{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%) rotate(-90deg);white-space:nowrap;font-family:var(--mono);font-size:9px;letter-spacing:.3em;color:var(--paper);background:var(--ink);padding:6px 10px}
+.split .half{padding:clamp(24px,3.4vw,44px)}
+.split .half h4{font-family:var(--serif);font-weight:420;font-size:clamp(22px,2.4vw,30px);margin-bottom:6px}
+.split .half .who{color:var(--accent-deep)}
+.split .half p{font-size:14.5px;color:var(--ink-70);margin-top:10px}
+.vflow{list-style:none;margin-top:22px}
+.vflow li{display:flex;align-items:center;gap:14px;padding:11px 0;border-bottom:1px solid var(--line-soft);font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase}
+.vflow li i{font-style:normal;width:24px;height:24px;border:1px solid var(--ink);border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:9px;flex-shrink:0}
+.vflow li span{color:var(--ink-70);margin-left:auto;font-size:10px;letter-spacing:.04em;text-transform:none;color:var(--ink-50)}
+
+/* breadth map */
+.breadth{display:grid;grid-template-columns:repeat(6,1fr);gap:14px}
+.bnode{border:1px solid var(--ink);padding:18px 16px;position:relative;background:var(--paper);transition:.25s}
+.bnode::before{content:"→";position:absolute;right:-14px;top:18px;color:var(--accent);z-index:2}
+.bnode:last-child::before{display:none}
+.bnode:hover{background:var(--ink);color:var(--paper)}
+.bnode:hover span{color:rgba(245,242,234,.6)}
+.bnode b{font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;display:block;line-height:1.6}
+.bnode span{display:block;font-size:11.5px;color:var(--ink-50);margin-top:8px;line-height:1.6}
+
+/* foundations sample */
+.found{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--ink)}
+.found>div{background:var(--paper);padding:24px}
+.found h5{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent-deep);margin-bottom:16px}
+.sw-row{display:flex;gap:8px}
+.sw{width:34px;height:34px;border:1px solid var(--line)}
+.tsrow{display:flex;align-items:baseline;gap:12px;padding:6px 0;border-bottom:1px solid var(--line-soft)}
+.tsrow:last-child{border:none}
+.tsrow .t1{font-family:var(--serif);line-height:1.15}
+.tsrow .t2{font-family:var(--mono);font-size:9px;color:var(--ink-50);margin-left:auto}
+.sp-row{display:flex;flex-direction:column;gap:7px}
+.sp-row i{height:10px;background:var(--ink);display:block}
+.comp-chips{display:flex;flex-wrap:wrap;gap:7px}
+.comp-chips i{font-style:normal;font-family:var(--mono);font-size:9px;letter-spacing:.08em;text-transform:uppercase;border:1px solid var(--line);padding:5px 10px;color:var(--ink-70)}
+
+/* prototype tiles */
+.wfgrid{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}
+.wft{aspect-ratio:4/3;border:1px solid var(--line);background:#fff;position:relative;overflow:hidden;transition:.25s}
+.wft svg{position:absolute;inset:8%;width:84%;height:84%}
+.wft:hover{border-color:var(--ink);transform:translateY(-3px)}
+.wft .fillc{fill:var(--paper-3)}
+.wft .linec{stroke:var(--ink-30);stroke-width:1.4;fill:none}
+.wft .acc{fill:var(--accent)}
+
+/* wellness journey */
+.journey{display:grid;grid-template-columns:repeat(5,1fr);gap:0;border:1px solid var(--ink)}
+.journey .j{padding:22px 18px;border-right:1px solid var(--line);position:relative}
+.journey .j:last-child{border-right:none}
+.journey .j::after{content:"→";position:absolute;right:-9px;top:22px;color:var(--accent);z-index:2;background:var(--paper);padding:0 2px}
+.journey .j:last-child::after{display:none}
+.journey .j i{font-family:var(--mono);font-style:normal;font-size:9.5px;letter-spacing:.14em;color:var(--accent-deep)}
+.journey .j b{display:block;font-family:var(--serif);font-weight:430;font-size:19px;margin:10px 0 6px}
+.journey .j span{font-size:12.5px;color:var(--ink-70);line-height:1.5;display:block}
+
+/* ---------- visual gallery ---------- */
+.gal-filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:clamp(28px,4vh,44px)}
+.gchip{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;border:1px solid var(--ink);padding:9px 18px;transition:.2s}
+.gchip.on,.gchip:hover{background:var(--ink);color:var(--paper)}
+.gal{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.spec{border:1px solid var(--line);background:var(--paper-2);transition:.3s;cursor:default}
+.spec:hover{border-color:var(--ink);transform:translateY(-4px)}
+.spec .art{aspect-ratio:4/3;position:relative;overflow:hidden;border-bottom:1px solid var(--line);background:var(--paper-3)}
+.spec .cap{display:flex;justify-content:space-between;gap:10px;padding:12px 14px;font-family:var(--mono);font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-50)}
+.spec .cap b{color:var(--ink);font-weight:500}
+.spec.hidden{display:none}
+/* typographic specimen compositions */
+.art .a-in{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:18px}
+.art .a-big{font-family:var(--serif);font-weight:400;line-height:.92;letter-spacing:-.02em;color:var(--ink)}
+.art .a-sm{font-family:var(--mono);font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-50);margin-top:10px}
+.art .a-rule{height:1px;background:var(--ink);margin:12px 0}
+.art .a-acc{color:var(--accent-deep)}
+.art svg{position:absolute;inset:0;width:100%;height:100%}
+
+/* ---------- resume view ---------- */
+.rsm-head{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap;padding:clamp(40px,7vh,80px) 0 30px}
+.rsm{max-width:900px;margin:0 auto;padding-bottom:60px}
+.rsm h1{font-family:var(--serif);font-weight:400;font-size:clamp(34px,4.5vw,54px);line-height:1.05}
+.rsm .rsm-sub{margin-top:10px;color:var(--ink-70)}
+.rsm .contact-line{margin-top:14px;font-family:var(--mono);font-size:11.5px;letter-spacing:.04em;color:var(--ink-70)}
+.rsm h2{font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent-deep);margin:44px 0 18px;padding-bottom:8px;border-bottom:1px solid var(--ink)}
+.rsm h3{font-size:17px;font-weight:600}
+.rsm .rrow{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+.rsm .rdate{font-family:var(--mono);font-size:11px;color:var(--ink-50);padding-top:2px}
+.rsm .rmeta{color:var(--ink-50);font-size:14px;margin:2px 0 10px}
+.rsm ul{list-style:none;margin-top:8px}
+.rsm ul li{padding:7px 0 7px 22px;position:relative;color:var(--ink-70);font-size:15px;line-height:1.6;border-bottom:1px solid var(--line-soft)}
+.rsm ul li:last-child{border:none}
+.rsm ul li::before{content:"—";position:absolute;left:0;color:var(--accent)}
+.rsm ul li b{color:var(--ink);font-weight:600}
+.rsm .prof{font-size:16.5px;line-height:1.7;color:var(--ink-70);max-width:74ch}
+.rsm .skills p{font-size:14.5px;color:var(--ink-70);margin-bottom:10px}
+.rsm .skills b{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink);font-weight:500}
+
+/* ---------- responsive ---------- */
+@media (max-width:1200px){.rail{display:none}}
+@media (max-width:1080px){
+  .work-row{grid-template-columns:70px 1fr;row-gap:26px}
+  .work-row .w-fig{grid-column:1/-1}
+  .proc{grid-template-columns:repeat(3,1fr)}
+  .proc .step{border:1px solid var(--line);margin-top:-1px}
+  .proc .step::after{display:none}
+  .whatido{grid-template-columns:1fr 1fr}
+  .wi:nth-child(2n){border-right:none}
+  .wi:nth-child(-n+2){border-bottom:1px solid var(--line)}
+  .cs-body{grid-template-columns:1fr}
+  .ant{grid-template-columns:1fr}
+  .stepper{grid-template-columns:repeat(4,1fr);gap:26px 0}
+  .stepper::before{display:none}
+  .breadth{grid-template-columns:repeat(3,1fr)}
+  .bnode:nth-child(3)::before{display:none}
+  .bnode:nth-child(3n+1){margin-top:14px}
+  .bnode:nth-child(n+4){margin-top:14px}
+  .wfgrid{grid-template-columns:repeat(4,1fr)}
+  .journey{grid-template-columns:repeat(3,1fr)}
+  .journey .j{border-bottom:1px solid var(--line)}
+  .journey .j:nth-child(3)::after{display:none}
+  .journey .j:nth-child(3n+1){border-right:none}
+  .meta-grid{grid-template-columns:1fr 1fr}
+  .meta-grid>div:nth-child(2n){border-right:none}
+  .meta-grid>div:nth-child(-n+2){border-bottom:1px solid var(--line)}
+}
+@media (max-width:820px){
+  .navlinks a:not(.keep){display:none}
+  .about-grid{grid-template-columns:1fr}
+  .viz-grid{grid-template-columns:1fr 1fr}
+  .viz-cell:nth-child(2n){border-right:none}
+  .viz-cell:nth-child(-n+2){border-bottom:1px solid var(--line)}
+  .cols2,.cols3{grid-template-columns:1fr}
+  .defs{grid-template-columns:1fr}
+  .dt-grid{grid-template-columns:1fr}
+  .learn{grid-template-columns:1fr}
+  .split{grid-template-columns:1fr}
+  .split .mid{height:1px;width:100%}
+  .split .mid span{transform:translate(-50%,-50%) rotate(0)}
+  .found{grid-template-columns:1fr}
+  .gal{grid-template-columns:1fr 1fr}
+  .f-grid{grid-template-columns:1fr}
+  .evd-row{grid-template-columns:80px 1fr 90px 70px}
+  .evd-row .eapp,.evd-row .etme{display:none}
+  .stats{grid-template-columns:1fr 1fr}
+  .stat:nth-child(2n){border-right:none}
+  .stat:nth-child(-n+2){border-bottom:1px solid var(--line)}
+  .chain{flex-direction:column}
+  .chain .cnode{margin-right:0;margin-bottom:26px}
+  .chain .cnode::after{right:50%;top:auto;bottom:-25px;transform:rotate(90deg)}
+}
+@media (max-width:560px){
+  .proc{grid-template-columns:1fr 1fr}
+  .whatido{grid-template-columns:1fr}
+  .wi{border-right:none;border-bottom:1px solid var(--line)}
+  .wi:last-child{border-bottom:none}
+  .viz-grid{grid-template-columns:1fr}
+  .viz-cell{border-right:none;border-bottom:1px solid var(--line)}
+  .viz-cell:last-child{border-bottom:none}
+  .gal{grid-template-columns:1fr}
+  .wfgrid{grid-template-columns:repeat(3,1fr)}
+  .journey{grid-template-columns:1fr 1fr}
+  .breadth{grid-template-columns:1fr 1fr}
+  .stepper{grid-template-columns:1fr 1fr;gap:22px 8px}
+  .meta-grid{grid-template-columns:1fr}
+  .meta-grid>div{border-right:none;border-bottom:1px solid var(--line)}
+  .meta-grid>div:last-child{border-bottom:none}
+}
+
+/* ---------- motion ---------- */
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.001s!important;animation-delay:0s!important;transition-duration:.001s!important}
+  .ticker-track{animation:none}
+  html{scroll-behavior:auto}
+}
+
+/* ---------- print (resume) ---------- */
+@media print{
+  nav.top,footer,#progress,.rail,.rsm-head .btn,.no-print{display:none!important}
+  body::before{display:none}
+  body{background:#fff;font-size:12.5px}
+  main{padding-top:0}
+  .view{display:none!important}
+  #view-resume{display:block!important}
+  .rsm{max-width:100%;padding-bottom:0}
+  .rsm h2{margin-top:26px}
+  .rsm h1{font-size:34px}
+  .rsm-head{padding-top:0}
+  a{color:#000}
+}
+</style>
+</head>
+<body data-view="home">
+
+<div id="progress" aria-hidden="true"></div>
+
+<nav class="top" aria-label="Main">
+  <div class="wrap bar">
+    <a class="brand" href="#/" aria-label="Sumedha Chouhan — home">
+      <span class="name">SUMEDHA&nbsp;CHOUHAN</span>
+      <span class="dot" aria-hidden="true"></span>
+    </a>
+    <div class="navlinks">
+      <a href="#/work" data-nav="work" class="keep">Work</a>
+      <a href="#/visual" data-nav="visual" class="keep">Visual</a>
+      <a href="#/about" data-nav="about">About</a>
+      <a href="#/resume" data-nav="resume" class="res">Resume</a>
+      <a href="#/contact" data-nav="contact" class="keep">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<aside class="rail" aria-hidden="true">
+  <a href="#hero" data-rail="hero" class="on">Start</a>
+  <a href="#work" data-rail="work">Work</a>
+  <a href="#visual-teaser" data-rail="visual">Visual</a>
+  <a href="#about" data-rail="about">About</a>
+  <a href="#process" data-rail="process">Process</a>
+  <a href="#contact" data-rail="contact">Contact</a>
+</aside>
+
+<main id="app">
+
+<!-- ================================================================
+     VIEW — HOME
+     ================================================================ -->
+<section class="view active" id="view-home" data-title="Sumedha Chouhan — Product Designer">
+
+  <!-- HERO -->
+  <div class="hero" id="hero">
+    <div class="wrap">
+      <div class="hero-top">
+        <span class="m m--ink">Sumedha Chouhan &nbsp;·&nbsp; Product Designer &nbsp;·&nbsp; Dubai, UAE</span>
+        <span class="status m" style="color:var(--ink-70)">
+          <span class="pulse" aria-hidden="true"></span> Open to senior product design roles — UAE
+        </span>
+      </div>
+
+      <h1 class="display">
+        I turn<br>
+        <span class="frag"><span>f</span><span>r</span><span>a</span><span>g</span><span>m</span><span>e</span><span>n</span><span>t</span><span>e</span><span>d</span></span> systems<br>
+        into <span class="clearw"><span class="clr">clear</span></span> ones.
+      </h1>
+
+      <p class="hero-sub">
+        Four years across <strong>B2B, AI and enterprise products</strong> — leading 0→1 design,
+        building design systems, and staying close to engineering until the last interaction
+        actually ships.
+      </p>
+
+      <div class="hero-cta">
+        <a class="btn btn--solid" href="#work">View selected work <span class="arw">↓</span></a>
+        <a class="btn btn--ghost" href="#/about">About me <span class="arw">→</span></a>
+      </div>
+    </div>
+
+    <!-- FIG.00 — the convergence: 5–6 client dashboards → one platform -->
+    <div class="wrap conv rv">
+      <svg viewBox="0 0 1160 430" role="img" aria-label="Diagram: five to six client-specific dashboards converging into one unified platform, Ikshana">
+        <!-- ghost client dashboards -->
+        <g class="ghost gfloat">
+          <rect x="30" y="11"  width="180" height="48" fill="none" stroke="rgba(23,21,15,.45)" stroke-dasharray="4 4"/>
+          <text x="44" y="30" font-size="7"  fill="rgba(23,21,15,.4)" letter-spacing="2">CLIENT DASHBOARD — 01</text>
+          <text x="44" y="46" font-size="11" fill="#17150F">RETAIL MALL</text>
+        </g>
+        <g class="ghost gfloat2">
+          <rect x="30" y="83"  width="180" height="48" fill="none" stroke="rgba(23,21,15,.45)" stroke-dasharray="4 4"/>
+          <text x="44" y="102" font-size="7" fill="rgba(23,21,15,.4)" letter-spacing="2">CLIENT DASHBOARD — 02</text>
+          <text x="44" y="118" font-size="11" fill="#17150F">CITY SURVEILLANCE</text>
+        </g>
+        <g class="ghost gfloat">
+          <rect x="30" y="155" width="180" height="48" fill="none" stroke="rgba(23,21,15,.45)" stroke-dasharray="4 4"/>
+          <text x="44" y="174" font-size="7" fill="rgba(23,21,15,.4)" letter-spacing="2">CLIENT DASHBOARD — 03</text>
+          <text x="44" y="190" font-size="11" fill="#17150F">TRANSIT AUTHORITY</text>
+        </g>
+        <g class="ghost gfloat2">
+          <rect x="30" y="227" width="180" height="48" fill="none" stroke="rgba(23,21,15,.45)" stroke-dasharray="4 4"/>
+          <text x="44" y="246" font-size="7" fill="rgba(23,21,15,.4)" letter-spacing="2">CLIENT DASHBOARD — 04</text>
+          <text x="44" y="262" font-size="11" fill="#17150F">INDUSTRIAL PLANT</text>
+        </g>
+        <g class="ghost gfloat">
+          <rect x="30" y="299" width="180" height="48" fill="none" stroke="rgba(23,21,15,.45)" stroke-dasharray="4 4"/>
+          <text x="44" y="318" font-size="7" fill="rgba(23,21,15,.4)" letter-spacing="2">CLIENT DASHBOARD — 05</text>
+          <text x="44" y="334" font-size="11" fill="#17150F">CAMPUS NETWORK</text>
+        </g>
+        <g class="ghost gfloat2">
+          <rect x="30" y="371" width="180" height="48" fill="none" stroke="rgba(23,21,15,.45)" stroke-dasharray="4 4"/>
+          <text x="44" y="390" font-size="7" fill="rgba(23,21,15,.4)" letter-spacing="2">CLIENT DASHBOARD — 06</text>
+          <text x="44" y="406" font-size="11" fill="#17150F">CORPORATE ESTATE</text>
+        </g>
+
+        <!-- convergence paths -->
+        <path id="cpath1" class="flow" d="M210 35  C 420 35,  560 120, 752 196" fill="none" stroke="rgba(23,21,15,.35)" stroke-width="1.2"/>
+        <path id="cpath2" class="flow" d="M210 107 C 430 107, 570 140, 752 204" fill="none" stroke="rgba(23,21,15,.35)" stroke-width="1.2"/>
+        <path id="cpath3" class="flow" d="M210 179 C 430 179, 570 185, 752 212" fill="none" stroke="rgba(23,21,15,.35)" stroke-width="1.2"/>
+        <path id="cpath4" class="flow" d="M210 251 C 430 251, 570 240, 752 220" fill="none" stroke="rgba(23,21,15,.35)" stroke-width="1.2"/>
+        <path id="cpath5" class="flow" d="M210 323 C 420 323, 560 285, 752 228" fill="none" stroke="rgba(23,21,15,.35)" stroke-width="1.2"/>
+        <path id="cpath6" class="flow" d="M210 395 C 400 395, 540 320, 752 236" fill="none" stroke="rgba(23,21,15,.35)" stroke-width="1.2"/>
+
+        <!-- traveling packets -->
+        <circle r="3" fill="#E8471C">
+          <animateMotion dur="4s" repeatCount="indefinite"><mpath href="#cpath2"/></animateMotion>
+        </circle>
+        <circle r="3" fill="#E8471C" opacity=".7">
+          <animateMotion dur="5s" begin="1.2s" repeatCount="indefinite"><mpath href="#cpath5"/></animateMotion>
+        </circle>
+
+        <!-- the unified platform -->
+        <g class="hubpop">
+          <circle cx="836" cy="216" r="76" fill="#17150F"/>
+          <circle cx="836" cy="216" r="88" fill="none" stroke="rgba(23,21,15,.25)" stroke-dasharray="2 6"/>
+          <text x="836" y="204" font-size="8" fill="rgba(245,242,234,.5)" text-anchor="middle" letter-spacing="3">ONE PLATFORM</text>
+          <text x="836" y="230" font-size="20" fill="#F5F2EA" text-anchor="middle" font-family="Fraunces,Georgia,serif" font-style="italic">Ikshana</text>
+          <circle cx="836" cy="252" r="2.5" fill="#E8471C"/>
+        </g>
+
+        <!-- outcome meta -->
+        <g class="metaR"  fill="#17150F">
+          <rect x="952" y="140" width="9" height="9" fill="#E8471C"/>
+          <text x="972" y="149" font-size="12" letter-spacing="1.5">100+ AI APPLICATIONS</text>
+        </g>
+        <g class="metaR metaR2" fill="#17150F">
+          <rect x="952" y="212" width="9" height="9" fill="#E8471C"/>
+          <text x="972" y="221" font-size="12" letter-spacing="1.5">30–40 CLIENTS</text>
+        </g>
+        <g class="metaR metaR3" fill="#17150F">
+          <rect x="952" y="284" width="9" height="9" fill="#E8471C"/>
+          <text x="972" y="293" font-size="12" letter-spacing="1.5">500+ DEPLOYMENTS</text>
+        </g>
+      </svg>
+      <div class="scrollcue">
+        <span class="m">Fig. 00 — the last three years, in one diagram</span>
+        <span class="m down" aria-hidden="true">↓ scroll</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- TICKER -->
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-track">
+      <span>0→1 Product Design<b>◆</b>Enterprise UX<b>◆</b>Design Systems<b>◆</b>Information Architecture<b>◆</b>AI Product UX<b>◆</b>Data-heavy Interfaces<b>◆</b>Interaction Design<b>◆</b>Design Direction<b>◆</b></span>
+      <span>0→1 Product Design<b>◆</b>Enterprise UX<b>◆</b>Design Systems<b>◆</b>Information Architecture<b>◆</b>AI Product UX<b>◆</b>Data-heavy Interfaces<b>◆</b>Interaction Design<b>◆</b>Design Direction<b>◆</b></span>
+    </div>
+  </div>
+
+  <!-- SELECTED WORK -->
+  <div class="sec" id="work">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <div>
+          <span class="idx">01 — Selected Work</span>
+          <h2>Three products.<br>Three different problems.</h2>
+        </div>
+        <p class="lead">Each case study is written the way the project actually felt — no shared template, no borrowed process.</p>
+      </div>
+
+      <!-- 01 Ikshana -->
+      <a class="work-row rv" href="#/work/ikshana">
+        <div class="w-idx">CS—01<span class="yr">2023→NOW</span></div>
+        <div>
+          <span class="m m--accent">Confidential · B2B · AI · Enterprise · 0→1</span>
+          <h3>Ikshana — Unified AI Video Analytics</h3>
+          <p class="w-line">Five or six client-specific dashboards became one platform — 100+ AI applications, 30–40 clients, 500+ deployments. Systems thinking, event-scale UX, and a design system built to hold it together.</p>
+          <div class="w-tags"><span class="tag">Systems</span><span class="tag">Dashboards</span><span class="tag">Design System</span><span class="tag">Data UX</span></div>
+          <span class="w-open">View case study <span class="arw">→</span></span>
+        </div>
+        <div class="w-fig fig">
+          <svg viewBox="0 0 380 260" role="img" aria-label="Reconstructed dashboard of the Ikshana platform">
+            <rect width="380" height="260" fill="#111417"/>
+            <rect width="44" height="260" fill="#191D22"/>
+            <circle cx="22" cy="24" r="6" fill="#E8471C"/>
+            <circle cx="22" cy="50" r="4" fill="rgba(255,255,255,.35)"/>
+            <circle cx="22" cy="72" r="4" fill="rgba(255,255,255,.35)"/>
+            <circle cx="22" cy="94" r="4" fill="rgba(255,255,255,.35)"/>
+            <rect x="44" width="336" height="34" fill="#191D22"/>
+            <rect x="58" y="10" width="130" height="15" rx="4" fill="none" stroke="rgba(255,255,255,.2)"/>
+            <circle cx="358" cy="17" r="7" fill="none" stroke="rgba(255,255,255,.3)"/>
+            <rect x="58" y="48" width="86" height="42" fill="#191D22"/>
+            <text x="68" y="68" font-size="13" fill="#E9ECEF">248</text>
+            <text x="68" y="82" font-size="6.5" fill="rgba(233,236,239,.45)" letter-spacing="1.5">EVENTS / 24H</text>
+            <rect x="152" y="48" width="86" height="42" fill="#191D22"/>
+            <text x="162" y="68" font-size="13" fill="#E9ECEF">1,204</text>
+            <text x="162" y="82" font-size="6.5" fill="rgba(233,236,239,.45)" letter-spacing="1.5">ACTIVE CAMERAS</text>
+            <rect x="246" y="48" width="86" height="42" fill="#191D22"/>
+            <text x="256" y="68" font-size="13" fill="#E9ECEF">99.2%</text>
+            <text x="256" y="82" font-size="6.5" fill="rgba(233,236,239,.45)" letter-spacing="1.5">UPTIME</text>
+            <rect x="58" y="100" width="182" height="72" fill="#191D22"/>
+            <polyline points="68,158 92,148 116,152 140,132 164,140 188,120 212,128 230,112" fill="none" stroke="#E8471C" stroke-width="1.6"/>
+            <polyline points="68,162 92,158 116,160 140,150 164,152 188,142 212,146 230,136" fill="none" stroke="rgba(255,255,255,.25)" stroke-width="1.2"/>
+            <rect x="250" y="100" width="118" height="72" fill="#191D22"/>
+            <circle cx="260" cy="114" r="2.5" fill="#E8471C"/><rect x="270" y="110" width="60" height="4" fill="rgba(255,255,255,.18)"/><rect x="270" y="118" width="40" height="3" fill="rgba(255,255,255,.1)"/>
+            <circle cx="260" cy="132" r="2.5" fill="#5D8CFF"/><rect x="270" y="128" width="52" height="4" fill="rgba(255,255,255,.18)"/><rect x="270" y="136" width="34" height="3" fill="rgba(255,255,255,.1)"/>
+            <circle cx="260" cy="150" r="2.5" fill="#3E8E5F"/><rect x="270" y="146" width="64" height="4" fill="rgba(255,255,255,.18)"/><rect x="270" y="154" width="38" height="3" fill="rgba(255,255,255,.1)"/>
+            <rect x="58" y="182" width="182" height="66" fill="#191D22"/>
+            <rect x="70" y="194" width="56" height="42" fill="none" stroke="rgba(255,255,255,.2)"/>
+            <rect x="80" y="204" width="22" height="26" fill="none" stroke="#E8471C" stroke-width="1.4"/>
+            <rect x="80" y="198" width="34" height="6" fill="#E8471C"/>
+            <rect x="140" y="194" width="56" height="42" fill="none" stroke="rgba(255,255,255,.2)"/>
+            <rect x="148" y="204" width="40" height="4" fill="rgba(255,255,255,.14)"/><rect x="148" y="214" width="30" height="4" fill="rgba(255,255,255,.14)"/><rect x="148" y="224" width="36" height="4" fill="rgba(255,255,255,.14)"/>
+            <rect x="206" y="194" width="26" height="42" fill="none" stroke="rgba(255,255,255,.2)"/>
+            <rect x="212" y="222" width="8" height="8" fill="#E8471C" opacity=".85"/><rect x="220" y="214" width="6" height="6" fill="#E5A50A" opacity=".7"/>
+            <rect x="250" y="182" width="118" height="66" fill="#191D22"/>
+            <text x="260" y="198" font-size="6.5" fill="rgba(233,236,239,.45)" letter-spacing="1.5">LIVE ALERTS</text>
+            <rect x="260" y="206" width="98" height="12" fill="rgba(232,71,28,.14)"/>
+            <text x="266" y="215" font-size="6.5" fill="#FF8A66">PERSON — GATE 2 IN</text>
+            <rect x="260" y="224" width="98" height="12" fill="rgba(255,255,255,.05)"/>
+            <text x="266" y="233" font-size="6.5" fill="rgba(233,236,239,.5)">VEHICLE — LOBBY</text>
+          </svg>
+          <div class="fig-cap"><span><b>Fig. 01</b> — Reconstructed dashboard, anonymized</span><span>Ikshana</span></div>
+        </div>
+      </a>
+
+      <!-- 02 Bike -->
+      <a class="work-row rv" href="#/work/bike">
+        <div class="w-idx">CS—02<span class="yr">2022–23</span></div>
+        <div>
+          <span class="m m--accent">Product Design · Mobile + Web · 0→1 · Two-sided</span>
+          <h3>Bike Service Platform</h3>
+          <p class="w-line">Riders on one side, garages on the other — service booking, payments, vehicle documents, insurance and memberships, designed end-to-end as the sole designer.</p>
+          <div class="w-tags"><span class="tag">0→1</span><span class="tag">Two-sided</span><span class="tag">Mobile</span><span class="tag">Design System</span></div>
+          <span class="w-open">View case study <span class="arw">→</span></span>
+        </div>
+        <div class="w-fig fig">
+          <div class="phones">
+            <div class="phone"><div class="scr">
+              <div class="notch"></div>
+              <div class="ph-status"><span>9:41</span><span>4G · 87%</span></div>
+              <div class="ph-head">Your ride<small>Rider app</small></div>
+              <div class="ph-card"><b>Next service · due in 12 days</b>
+                <div class="row"><span>Classic 350 — 8,412 km</span><span class="pill warn">Due soon</span></div>
+              </div>
+              <div class="ph-card"><b>Documents</b>
+                <div class="row"><span>DL · RC · Insurance</span><span class="pill ok">Verified</span></div>
+              </div>
+              <div class="ph-cta">Book a service</div>
+              <div class="ph-nav"><i class="on">Home</i><i>Docs</i><i>Shop</i><i>More</i></div>
+            </div></div>
+            <div class="phone"><div class="scr">
+              <div class="notch"></div>
+              <div class="ph-status"><span>9:41</span><span>Wi-Fi · 62%</span></div>
+              <div class="ph-head">Job queue<small>Garage console</small></div>
+              <div class="ph-card"><b>JOB #1042 — Full service</b>
+                <div class="row"><span>Pickup · 11:30</span><span class="pill warn">In progress</span></div>
+              </div>
+              <div class="ph-card"><b>JOB #1041 — Oil change</b>
+                <div class="row"><span>Walk-in · 10:15</span><span class="pill ok">Done</span></div>
+              </div>
+              <div class="ph-cta acc">Update status</div>
+              <div class="ph-nav"><i class="on">Jobs</i><i>Parts</i><i>Payouts</i><i>Team</i></div>
+            </div></div>
+          </div>
+          <div class="fig-cap"><span><b>Fig. 02</b> — Two products, one system</span><span>Rider · Garage</span></div>
+        </div>
+      </a>
+
+      <!-- 03 Wellness -->
+      <a class="work-row rv" href="#/work/wellness">
+        <div class="w-idx">CS—03<span class="yr">UAE</span></div>
+        <div>
+          <span class="m m--accent">Product Design · Mobile · Consumer · UAE</span>
+          <h3>Physiotherapy &amp; Wellness</h3>
+          <p class="w-line">At-home physiotherapy for a UAE client — a service where the real design problem wasn't booking. It was trust: someone is entering your home.</p>
+          <div class="w-tags"><span class="tag">Consumer UX</span><span class="tag">Service Journey</span><span class="tag">Booking</span><span class="tag">Trust</span></div>
+          <span class="w-open">View case study <span class="arw">→</span></span>
+        </div>
+        <div class="w-fig fig">
+          <div class="phones" style="justify-content:center">
+            <div class="phone"><div class="scr">
+              <div class="notch"></div>
+              <div class="ph-status"><span>9:41</span><span>4G · 78%</span></div>
+              <div class="ph-head">Physio at home<small>Dubai · UAE</small></div>
+              <div class="ph-card"><b>Dr. Aisha K. — Musculoskeletal</b>
+                <div class="row"><span>9 yrs · DHA licensed</span><span class="pill ok">Verified</span></div>
+              </div>
+              <div class="ph-card"><b>Session — 45 min</b>
+                <div class="row"><span>Tue · 5:30 PM · Al Barsha</span><span><b>AED 220</b></span></div>
+              </div>
+              <div class="ph-cta acc">Confirm booking</div>
+              <div class="ph-nav"><i class="on">Home</i><i>Sessions</i><i>Plan</i><i>Help</i></div>
+            </div></div>
+          </div>
+          <div class="fig-cap"><span><b>Fig. 03</b> — Booking: credentials first, price second</span><span>Wellness</span></div>
+        </div>
+      </a>
+
+    </div>
+  </div>
+
+  <!-- VISUAL TEASER -->
+  <div class="sec" id="visual-teaser" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <div>
+          <span class="idx">02 — Visual Design</span>
+          <h2>The second<br>discipline.</h2>
+        </div>
+        <p class="lead">Product design is the main act — but not the whole practice. Marketing, communication, web and brand work live in their own room, so the product story stays clean.</p>
+      </div>
+      <a class="viz-grid rv" href="#/visual">
+        <div class="viz-cell">
+          <span class="n">A —</span>
+          <h4>Marketing</h4>
+          <p>Social campaigns, product announcements, launch assets.</p>
+          <span class="arw">Browse →</span>
+        </div>
+        <div class="viz-cell">
+          <span class="n">B —</span>
+          <h4>Communication</h4>
+          <p>Presentations, case-study layouts, sales material.</p>
+          <span class="arw">Browse →</span>
+        </div>
+        <div class="viz-cell">
+          <span class="n">C —</span>
+          <h4>Web</h4>
+          <p>Website design, landing pages, product pages.</p>
+          <span class="arw">Browse →</span>
+        </div>
+        <div class="viz-cell">
+          <span class="n">D —</span>
+          <h4>Brand</h4>
+          <p>Visual systems, art direction, identity support.</p>
+          <span class="arw">Browse →</span>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <div class="sec" id="about" style="border-top:1px solid var(--line)">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <div>
+          <span class="idx">03 — About</span>
+          <h2>Self-taught.<br>Systems-bound.</h2>
+        </div>
+      </div>
+      <div class="about-grid">
+        <div class="story rv">
+          <p>I started as a <b>self-taught designer</b> — a physics and computer-science graduate who fell into design through the Google UX certificate and never came back out.</p>
+          <p>The path ran from designing mobile products as a <b>sole designer</b> — 45+ prototypes, everything owned, nobody to ask — to leading product design for a <b>complex B2B AI platform</b> used across dozens of enterprises.</p>
+          <p>Along the way the work grew outward: from screens to <b>systems</b>, from systems to <b>design direction and mentoring</b>. What has stayed constant is the part I like most — taking something tangled and technical, and making it legible.</p>
+        </div>
+        <div class="rv rv-d1">
+          <span class="m" style="display:block;margin-bottom:18px">Fig. 04 — the route so far</span>
+          <ol class="timeline">
+            <li>
+              <span class="t-yr">2021–22</span>
+              <span class="t-node"></span>
+              <div><b>Self-taught designer</b><span>B.Sc. Physics · Math · CS → Google UX Design Certificate</span></div>
+            </li>
+            <li>
+              <span class="t-yr">2022</span>
+              <span class="t-node"></span>
+              <div><b>Sole designer — Mechanify</b><span>Mobile redesign, 45+ prototypes, founders at arm's length</span></div>
+            </li>
+            <li>
+              <span class="t-yr">2023 →</span>
+              <span class="t-node"></span>
+              <div><b>Product designer — Intozi Tech</b><span>0→1 design of Ikshana, an enterprise AI video analytics platform</span></div>
+            </li>
+            <li>
+              <span class="t-yr">Now</span>
+              <span class="t-node"></span>
+              <div><b>Senior scope</b><span>Design system leadership · mentoring · direction across product, web &amp; visual communication</span></div>
+            </li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="whatido rv">
+        <div class="wi">
+          <span class="m">01 — Product</span>
+          <h4>Product Design</h4>
+          <p>0→1 products · complex workflows · enterprise UX · turning technical requirements into usable experiences.</p>
+        </div>
+        <div class="wi">
+          <span class="m">02 — Craft</span>
+          <h4>UX / UI</h4>
+          <p>Information architecture · user flows · interaction design · dashboards &amp; data-heavy interfaces.</p>
+        </div>
+        <div class="wi">
+          <span class="m">03 — Systems</span>
+          <h4>Design Systems</h4>
+          <p>Foundations, components and patterns · Figma-to-development shared language · governance at scale.</p>
+        </div>
+        <div class="wi">
+          <span class="m">04 — People</span>
+          <h4>Direction</h4>
+          <p>Design leadership · mentoring &amp; reviews · cross-functional collaboration with engineering and leadership.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PROCESS -->
+  <div class="sec" id="process" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <div>
+          <span class="idx">04 — How I Work</span>
+          <h2>Understand, then<br>give it structure.</h2>
+        </div>
+        <p class="lead">Not a template — the loop changes shape for every problem. This is the constant underneath.</p>
+      </div>
+      <div class="proc rv">
+        <div class="step">
+          <h4>Understand</h4>
+          <p>Business goals, users, technical constraints — and the system that already exists behind the screen.</p>
+        </div>
+        <div class="step">
+          <h4>Structure</h4>
+          <p>Information architecture, workflows, states and product logic before any pixels get arranged.</p>
+        </div>
+        <div class="step">
+          <h4>Design</h4>
+          <p>Flows, interaction patterns, UI — built on the design system, not beside it.</p>
+        </div>
+        <div class="step">
+          <h4>Collaborate</h4>
+          <p>With product, engineering and stakeholders — feasibility is a design input, not a surprise.</p>
+        </div>
+        <div class="step">
+          <h4>Refine</h4>
+          <p>Validate, iterate, review implementation — improve against real-world constraints.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- ================================================================
+     VIEW — CASE STUDY 01 : IKSHANA
+     ================================================================ -->
+<section class="view" id="view-ikshana" data-title="Ikshana — Sumedha Chouhan">
+
+  <div class="cs-hero">
+    <div class="wrap">
+      <span class="m m--accent">Case Study 01 &nbsp;·&nbsp; Confidential · B2B · AI · Enterprise · 0→1</span>
+      <div class="tags">
+        <span class="tag">Systems Thinking</span><span class="tag">Enterprise UX</span><span class="tag">Data-heavy UI</span><span class="tag">Design Systems</span><span class="tag">Design Leadership</span>
+      </div>
+      <h1>Ikshana</h1>
+      <p class="sub">Designing a unified AI video analytics platform for enterprise operations — from five or six client-specific dashboards to one system.</p>
+
+      <div class="meta-grid rv">
+        <div><span class="m">Role</span><p>Senior UI/UX Designer — product definition through implementation</p></div>
+        <div><span class="m">Timeline</span><p>Mar 2023 → Present</p></div>
+        <div><span class="m">Team</span><p>CTO · 5–6 frontend developers · product &amp; business stakeholders</p></div>
+        <div><span class="m">Involvement</span><p>IA · UX/UI · Interaction design · Design system · Design direction</p></div>
+      </div>
+
+      <div class="conf rv">
+        <span class="sym">CONFIDENTIAL</span>
+        <p>This case study uses reconstructed, simplified and anonymized diagrams in place of real product screens — the product and client information stays private, the thinking doesn't.</p>
+      </div>
+    </div>
+
+    <div class="wrap" style="margin-top:clamp(36px,6vh,64px)">
+      <div class="fig rv">
+        <svg viewBox="0 0 960 430" role="img" aria-label="Reconstructed view of the Ikshana platform: navigation, overview metrics, live events and camera monitoring">
+          <rect width="960" height="430" fill="#111417"/>
+          <rect width="170" height="430" fill="#191D22"/>
+          <rect x="24" y="26" width="12" height="12" fill="#E8471C"/>
+          <text x="46" y="37" font-size="12" fill="#E9ECEF" font-family="Fraunces,Georgia,serif" font-style="italic">Ikshana</text>
+          <g font-size="9" letter-spacing="1.5" fill="rgba(233,236,239,.55)">
+            <text x="24" y="86">OVERVIEW</text><text x="24" y="116">AI APPLICATIONS</text><text x="24" y="146">CAMERAS</text><text x="24" y="176">LOCATIONS</text><text x="24" y="206">EVENTS</text><text x="24" y="236">ALERTS</text><text x="24" y="266">SERVERS</text><text x="24" y="296">USERS</text><text x="24" y="326">REPORTS</text>
+          </g>
+          <rect x="24" y="192" width="92" height="20" fill="rgba(232,71,28,.14)"/>
+          <rect x="24" y="192" width="3" height="20" fill="#E8471C"/>
+          <rect x="170" width="790" height="44" fill="#191D22"/>
+          <rect x="188" y="14" width="220" height="16" rx="5" fill="none" stroke="rgba(255,255,255,.22)"/>
+          <text x="198" y="26" font-size="8.5" fill="rgba(233,236,239,.4)" letter-spacing="1">SEARCH — EVENTS, CAMERAS, APPS</text>
+          <circle cx="896" cy="22" r="8" fill="none" stroke="rgba(255,255,255,.3)"/>
+          <rect x="196" y="64" width="228" height="74" fill="#191D22"/>
+          <text x="212" y="96" font-size="22" fill="#E9ECEF">1,204</text>
+          <text x="212" y="120" font-size="7.5" fill="rgba(233,236,239,.45)" letter-spacing="1.8">ACTIVE CAMERAS · ALL CLIENTS</text>
+          <rect x="436" y="64" width="228" height="74" fill="#191D22"/>
+          <text x="452" y="96" font-size="22" fill="#E9ECEF">248</text>
+          <text x="452" y="120" font-size="7.5" fill="rgba(233,236,239,.45)" letter-spacing="1.8">EVENTS · LAST 24 HOURS</text>
+          <rect x="676" y="64" width="254" height="74" fill="#191D22"/>
+          <text x="692" y="96" font-size="22" fill="#FF8A66">7</text>
+          <text x="692" y="120" font-size="7.5" fill="rgba(233,236,239,.45)" letter-spacing="1.8">OPEN ALERTS</text>
+          <circle cx="916" cy="90" r="3.5" fill="#E8471C"/>
+          <rect x="196" y="152" width="428" height="120" fill="#191D22"/>
+          <text x="212" y="174" font-size="8" fill="rgba(233,236,239,.45)" letter-spacing="1.8">EVENT VOLUME — 24H</text>
+          <polyline points="212,248 252,238 292,244 332,222 372,230 412,206 452,214 492,196 532,204 572,186 600,176" fill="none" stroke="#E8471C" stroke-width="1.8"/>
+          <polyline points="212,252 252,248 292,252 332,240 372,244 412,232 452,238 492,226 532,230 572,220 600,214" fill="none" stroke="rgba(255,255,255,.25)" stroke-width="1.2"/>
+          <line x1="460" y1="160" x2="460" y2="264" stroke="rgba(255,255,255,.15)" stroke-dasharray="3 4"/>
+          <rect x="676" y="152" width="254" height="120" fill="#191D22"/>
+          <text x="692" y="174" font-size="8" fill="rgba(233,236,239,.45)" letter-spacing="1.8">LIVE EVENT FEED</text>
+          <g>
+            <circle cx="694" cy="192" r="3" fill="#E8471C"/><rect x="706" y="186" width="140" height="5" fill="rgba(255,255,255,.2)"/><rect x="880" y="186" width="34" height="5" fill="rgba(255,255,255,.1)"/>
+            <circle cx="694" cy="212" r="3" fill="#5D8CFF"/><rect x="706" y="206" width="120" height="5" fill="rgba(255,255,255,.2)"/><rect x="880" y="206" width="34" height="5" fill="rgba(255,255,255,.1)"/>
+            <circle cx="694" cy="232" r="3" fill="#3E8E5F"/><rect x="706" y="226" width="150" height="5" fill="rgba(255,255,255,.2)"/><rect x="880" y="226" width="34" height="5" fill="rgba(255,255,255,.1)"/>
+            <circle cx="694" cy="252" r="3" fill="#E8471C"/><rect x="706" y="246" width="100" height="5" fill="rgba(255,255,255,.2)"/><rect x="880" y="246" width="34" height="5" fill="rgba(255,255,255,.1)"/>
+          </g>
+          <rect x="196" y="286" width="428" height="122" fill="#191D22"/>
+          <text x="212" y="308" font-size="8" fill="rgba(233,236,239,.45)" letter-spacing="1.8">CAMERA GRID — GATE 2</text>
+          <rect x="212" y="320" width="180" height="76" fill="none" stroke="rgba(255,255,255,.2)"/>
+          <rect x="248" y="334" width="44" height="52" fill="none" stroke="#E8471C" stroke-width="1.6"/>
+          <rect x="248" y="326" width="66" height="8" fill="#E8471C"/>
+          <text x="252" y="332" font-size="6.5" fill="#fff" letter-spacing="1">PERSON · 98%</text>
+          <rect x="412" y="320" width="92" height="76" fill="none" stroke="rgba(255,255,255,.2)"/>
+          <rect x="422" y="334" width="60" height="5" fill="rgba(255,255,255,.14)"/><rect x="422" y="346" width="48" height="5" fill="rgba(255,255,255,.14)"/><rect x="422" y="358" width="56" height="5" fill="rgba(255,255,255,.14)"/><rect x="422" y="370" width="36" height="5" fill="rgba(255,255,255,.14)"/>
+          <rect x="524" y="320" width="84" height="76" fill="none" stroke="rgba(255,255,255,.2)"/>
+          <rect x="534" y="372" width="12" height="12" fill="#E8471C" opacity=".85"/><rect x="550" y="358" width="9" height="9" fill="#E5A50A" opacity=".7"/><rect x="564" y="366" width="7" height="7" fill="#5D8CFF" opacity=".7"/>
+          <rect x="676" y="286" width="254" height="122" fill="#191D22"/>
+          <text x="692" y="308" font-size="8" fill="rgba(233,236,239,.45)" letter-spacing="1.8">FILTERS — APPLIED</text>
+          <g font-size="7.5" letter-spacing="1">
+            <rect x="692" y="320" width="76" height="16" rx="8" fill="rgba(232,71,28,.16)"/><text x="702" y="331" fill="#FF8A66">ANPR</text>
+            <rect x="774" y="320" width="86" height="16" rx="8" fill="rgba(255,255,255,.07)"/><text x="784" y="331" fill="rgba(233,236,239,.6)">GATE 2</text>
+            <rect x="692" y="344" width="96" height="16" rx="8" fill="rgba(255,255,255,.07)"/><text x="702" y="355" fill="rgba(233,236,239,.6)">VEHICLE</text>
+            <rect x="796" y="344" width="72" height="16" rx="8" fill="rgba(255,255,255,.07)"/><text x="806" y="355" fill="rgba(233,236,239,.6)">24 H</text>
+          </g>
+          <text x="692" y="388" font-size="7.5" fill="rgba(233,236,239,.4)" letter-spacing="1.5">3 OF 12 DIMENSIONS IN USE</text>
+        </svg>
+        <div class="fig-cap"><span><b>Fig. 05</b> — Reconstructed overview · simplified &amp; anonymized</span><span>Ikshana · 2023→</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 01 CONTEXT -->
+  <div class="cs-sec">
+    <div class="wrap">
+      <div class="cs-num rv"><span class="n">01</span><h2>The product wasn't one product.</h2></div>
+      <div class="cs-body">
+        <div class="txt rv">
+          <p>When I joined Intozi in 2023, the company had <b>five or six separate dashboards</b> — one per client, each solving the same category of problem in a slightly different way.</p>
+          <p>Underneath them all ran the same machinery: AI applications, cameras, locations, events, alerts, servers, users, reports, configuration. The same concepts, rebuilt again and again, drifting further apart each time.</p>
+          <p>The opportunity was clear: replace them all with <b>one scalable platform</b> that could serve every existing client — and every client after them.</p>
+        </div>
+        <div class="aside rv rv-d1">
+          <span class="m">The system underneath</span>
+          <ul>
+            <li>AI applications</li><li>Cameras</li><li>Locations</li><li>Events</li><li>Alerts</li><li>Servers</li><li>Users</li><li>Reports</li><li>Configuration</li>
+          </ul>
+        </div>
+      </div>
+      <div class="pull rv" style="margin-top:clamp(36px,6vh,64px)">
+        <span class="q">The challenge —</span> how do you fold a large amount of technical functionality into one product without making it feel overwhelming?
+      </div>
+    </div>
+  </div>
+
+  <!-- 02 SCALE -->
+  <div class="cs-sec">
+    <div class="wrap">
+      <div class="cs-num rv"><span class="n">02</span><h2>The scale of the thing.</h2></div>
+      <p class="rv" style="max-width:62ch;color:var(--ink-70);margin-bottom:clamp(28px,5vh,48px)">The challenge was never "combining screens." Each part of the platform carried relationships, dependencies and different user needs — and all of it had to work as one system.</p>
+      <div class="stats rv">
+        <div class="stat hot"><span class="num-big">5–6→1</span><span class="m lbl">client dashboards consolidated</span></div>
+        <div class="stat"><span class="num-big"><span class="count" data-to="100">0</span>+</span><span class="m lbl">AI applications supported</span></div>
+        <div class="stat"><span class="num-big">30–40</span><span class="m lbl">clients on the platform</span></div>
+        <div class="stat"><span class="num-big"><span class="count" data-to="500">0</span>+</span><span class="m lbl">live deployments</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 03 REAL PROBLEM / SYSTEM MAP -->
+  <div class="cs-sec">
+    <div class="wrap">
+      <div class="cs-num rv"><span class="n">03</span><h2>Not too many screens — too many connected concepts.</h2></div>
+      <div class="cs-body" style="margin-bottom:clamp(28px,5vh,48px)">
+        <div class="txt rv">
+          <p>An AI application connects to cameras. Cameras belong to locations. Cameras generate events. Events trigger alerts. Servers support deployments. Users touch different parts of the system. Reports pull it back together.</p>
+          <p>So instead of designing features one screen at a time, I <b>mapped the system itself</b> — and let that map drive the information architecture and navigation.</p>
+        </div>
+        <div class="aside rv rv-d1">
+          <span class="m">What the map changed</span>
+          <ul>
+            <li>Navigation followed ownership, not menus</li>
+            <li>Every object got one canonical home</li>
+            <li>Relationships became links, not duplicate screens</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="fig rv">
+        <div class="sysmap" id="sysmap">
+          <svg viewBox="0 0 1000 540" role="img" aria-label="Interactive system map of the Ikshana platform concepts and their relationships">
+            <!-- links -->
+            <path class="link" data-a="clients"    data-b="locations" d="M180 63 C 230 63, 250 63, 300 63"/>
+            <path class="link" data-a="locations"  data-b="cameras"   d="M450 63 C 500 63, 520 63, 570 63"/>
+            <path class="link" data-a="cameras"    data-b="apps"      d="M720 63 C 790 63, 830 140, 700 240 L 700 250" />
+            <path class="link" data-a="servers"    data-b="apps"      d="M450 273 C 500 273, 520 273, 570 273"/>
+            <path class="link" data-a="apps"       data-b="events"    d="M720 273 C 790 273, 800 273, 840 273"/>
+            <path class="link dsh" data-a="events" data-b="alerts"    d="M915 296 C 915 400, 800 463, 720 463"/>
+            <path class="link dsh" data-a="alerts" data-b="users"     d="M570 463 C 520 463, 500 463, 450 463"/>
+            <path class="link dsh" data-a="events" data-b="reports"   d="M880 296 C 760 360, 340 360, 130 296"/>
+            <path class="link dsh" data-a="users"  data-b="clients"   d="M300 463 C 150 463, 105 380, 105 120"/>
+            <!-- labels -->
+            <text class="lk-lbl" x="212" y="55">owns</text>
+            <text class="lk-lbl" x="482" y="55">contains</text>
+            <text class="lk-lbl" x="480" y="265">runs on</text>
+            <text class="lk-lbl" x="742" y="265">generates</text>
+            <text class="lk-lbl" x="770" y="408">may trigger</text>
+            <text class="lk-lbl" x="482" y="455">notifies</text>
+            <text class="lk-lbl" x="440" y="342">aggregates into</text>
+            <!-- nodes -->
+            <g class="node" data-node="clients" tabindex="0"><rect x="30" y="40" width="150" height="46" rx="3"/><text x="105" y="68" text-anchor="middle">Clients</text></g>
+            <g class="node" data-node="locations" tabindex="0"><rect x="300" y="40" width="150" height="46" rx="3"/><text x="375" y="68" text-anchor="middle">Locations</text></g>
+            <g class="node" data-node="cameras" tabindex="0"><rect x="570" y="40" width="150" height="46" rx="3"/><text x="645" y="68" text-anchor="middle">Cameras</text></g>
+            <g class="node" data-node="reports" tabindex="0"><rect x="30" y="250" width="150" height="46" rx="3"/><text x="105" y="278" text-anchor="middle">Reports</text></g>
+            <g class="node" data-node="servers" tabindex="0"><rect x="300" y="250" width="150" height="46" rx="3"/><text x="375" y="278" text-anchor="middle">Servers</text></g>
+            <g class="node" data-node="apps" tabindex="0"><rect x="570" y="250" width="150" height="46" rx="3"/><text x="645" y="278" text-anchor="middle">AI Apps</text></g>
+            <g class="node" data-node="events" tabindex="0"><rect x="840" y="250" width="150" height="46" rx="3"/><circle class="ndot" cx="915" cy="250" r="3"/><text x="915" y="278" text-anchor="middle">Events</text></g>
+            <g class="node" data-node="alerts" tabindex="0"><rect x="570" y="440" width="150" height="46" rx="3"/><text x="645" y="468" text-anchor="middle">Alerts</text></g>
+            <g class="node" data-node="users" tabindex="0"><rect x="300" y="440" width="150" height="46" rx="3"/><text x="375" y="468" text-anchor="middle">Users</text></g>
+          </svg>
+          <div class="map-cap" id="mapcap" aria-live="polite"><b>Fig. 06</b> — Reconstructed system map. Hover or focus any node — every concept connects.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 04 DP1 -->
+  <div class="cs-sec">
+    <div class="wrap">
+      <div class="cs-num rv"><span class="n">04</span><h2>Problem 01 — one dashboard, many clients.</h2></div>
+      <div class="cs-body" style="margin-bottom:clamp(28px,5vh,48px)">
+        <div class="txt rv">
+          <p>Client-specific dashboards made sense when each client was the product. A unified platform needed a different mental model — one experience that could absorb <b>different deployments, locations, cameras, AI applications, roles and configurations</b> without forcing every user through everyone else's complexity.</p>
+          <p>The answer was a stable hierarchy under a stable global structure: <b>Client → Location → Camera → AI Application → Event</b>. Where you are never changes how you got there; what you see scales underneath.</p>
+        </div>
+        <div class="aside rv rv-d1">
+          <span class="m">What I worked on</span>
+          <ul>
+            <li>Hierarchy — what owns what</li>
+            <li>Navigation — global vs contextual</li>
+            <li>Context — always knowing where you operate</li>
+            <li>Scalability — 10 cameras or 400</li>
+          </ul>
+        </div>
+      </div>
+      <div class="rv">
+        <div class="chain">
+          <div class="cnode"><b>Client</b><span>tenant · roles · config</span></div>
+          <div class="cnode"><b>Location</b><span>site · zones</span></div>
+          <div class="cnode"><b>Camera</b><span>source · stream</span></div>
+          <div class="cnode"><b>AI App</b><span>detection rules</span></div>
+          <div class="cnode"><b>Event</b><span>evidence · alert · report</span></div>
+        </div>
+        <p class="m" style="margin-top:14px">Fig. 07 — the ownership chain that organised the platform</p>
+      </div>
+      <div class="pull rv" style="margin-top:clamp(32px,5vh,56px)">
+        <span class="q">Design principle —</span> keep the global structure stable, and let content and context scale underneath it.
+      </div>
+    </div>
+  </div>
+
+  <!-- 05 DP2 -->
+  <div class="cs-sec">
+    <div class="wrap">
+      <div class="cs-num rv"><span class="n">05</span><h2>Problem 02 — designing for information overload.</h2></div>
+      <div class="cs-body" style="margin-bottom:clamp(28px,5vh,48px)">
+        <div class="txt rv">
+          <p>An operations dashboard can't show everything equally — so it stopped trying. I structured the overview around one question: <b>what does this user need to understand the current state of their system?</b></p>
+        </div>
+        <div class="aside rv rv-d1">
+          <span class="m">The hierarchy that answered it</span>
+        </div>
+      </div>
+      <div class="defs rv">
+        <div><h5>First — system status</h5><p>Deployment health, connectivity, what needs attention before anything else.</p></div>
+        <div><h5>Then — priority alerts</h5><p>The events that crossed a threshold, ranked, not mixed into the stream.</p></div>
+        <div><h5>Then — recent events</h5><p>A scannable digest of detections, filterable before it's read.</p></div>
+        <div><h5>Then — app activity</h5><p>Which AI applications are running, where, and how hard.</p></div>
+        <div><h5>Context — deployment health</h5><p>Servers and edge devices, without going to a server screen.</p></div>
+        <div><h5>Last — quick actions</h5><p>The three or four things operators actually do from the top.</p></div>
+      </div>
+      <div class="pull rv" style="margin-top:clamp(32px,5vh,56px)">
+        <span class="q">The goal —</span> turn a dense operational system into a starting point for decisions, not a wall of everything the system knows.
+      </div>
+    </div>
+  </div>
+
+  <!-- 06 DP3 / EVENT DEMO -->
+  <div class="cs-sec">
+    <div class="wrap">
+      <div class="cs-num rv"><span class="n">06</span><h2>Problem 03 — events, usable at scale.</h2></div>
+      <div class="cs-body" style="margin-bottom:clamp(28px,5vh,48px)">
+        <div class="txt rv">
+          <p>Events arrived from many cameras, many locations, different applications, different types, different times. A simple chronological list would drown the operator — the question became <b>what deserves attention first?</b></p>
+          <p>The design below isn't a screenshot. It's a <b>working reconstruction</b> — filter it, search it, break it. The loading, filtered and empty states are deliberate: they were designed too.</p>
+        </div>
+        <div class="aside rv rv-d1">
+          <span class="m">What I worked on</span>
+          <ul>
+            <li>Filtering across every useful dimension</li>
+            <li>Search that reduces scanning to finding</li>
+            <li>Grouping by source and relationship</li>
+            <li>Density — identify without opening</li>
+            <li>Loading · empty · filtered · error states</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="evdemo rv" id="evdemo">
+        <div class="evd-bar">
+          <span class="ttl">Events — <b id="evd-client">Gate 2 cluster</b></span>
+          <label class="evd-search">
+            <span aria-hidden="true" style="color:var(--d-dim)">⌕</span>
+            <input type="text" id="evd-search" placeholder="SEARCH ID, CAMERA, TYPE…" aria-label="Search events">
+          </label>
+        </div>
+        <div class="evd-filters" id="evd-filters">
+          <div class="evd-group">
+            <span class="glbl">Camera</span>
+            <div class="evd-chips" data-dim="cam">
+              <button class="evd-chip" data-val="Gate 2">Gate 2</button>
+              <button class="evd-chip" data-val="Gate 1">Gate 1</button>
+              <button class="evd-chip" data-val="Lobby">Lobby</button>
+              <button class="evd-chip" data-val="Perimeter">Perimeter</button>
+              <button class="evd-chip" data-val="Loading">Loading Bay</button>
+            </div>
+          </div>
+          <div class="evd-group">
+            <span class="glbl">AI Application</span>
+            <div class="evd-chips" data-dim="app">
+              <button class="evd-chip" data-val="ANPR">ANPR</button>
+              <button class="evd-chip" data-val="Intrusion">Intrusion</button>
+              <button class="evd-chip" data-val="Loitering">Loitering</button>
+              <button class="evd-chip" data-val="PPE">PPE Check</button>
+            </div>
+          </div>
+          <div class="evd-group">
+            <span class="glbl">Type</span>
+            <div class="evd-chips" data-dim="type">
+              <button class="evd-chip" data-val="Vehicle">Vehicle</button>
+              <button class="evd-chip" data-val="Person">Person</button>
+              <button class="evd-chip" data-val="Object">Object</button>
+            </div>
+          </div>
+        </div>
+        <div class="evd-count" id="evd-count">Showing <b>12</b> of 12 events</div>
+        <div class="evd-load" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+        <div class="evd-rows" id="evd-rows"></div>
+        <div class="evd-empty" id="evd-empty">
+          <div class="box" aria-hidden="true">∅</div>
+          <p>No events match this combination of filters.</p>
+          <button class="btn btn--sm btn--solid" id="evd-reset" style="border-color:var(--accent);background:var(--accent)">Clear all filters</button>
+        </div>
+        <div class="demo-note">
+          <span><b>Working reconstruction</b></span>
+          <span>States included: loading · filtered · empty — because those were designed too</span>
+        </div>
+      </div>
+      <div class="pull rv" style="margin-top:clamp(32px,5vh,56px)">
+        <span class="q">The goal —</span> reduce how much a user must scan before finding the event that matters.
+      </div>
+    </div>
+  </div>
+
+  <!-- 07 DP4 / TABLE -->
+  <div class="cs-sec">
+    <div class="wrap">
+      <div class="cs-num rv"><span class="n">07</span><h2>Problem 04 — when data grows, UI needs rules.</h2></div>
+      <div class="cs-body" style="margin-bottom:clamp(28px,5vh,48px)">
+        <div class="txt rv">
+          <p>Tables carried the platform — events, cameras, applications, users, reports. Rather than "designing a table," I defined the rules every table obeyed: <b>hierarchy, density, scanning, filtering, status, actions, and what happens when there's nothing to show.</b></p>
+        </div>
+      </div>
+      <div class="ant rv">
+        <div class="ui-dark">
+          <div style="display:flex;gap:8px;padding:12px 16px;border-bottom:1px solid var(--d-line);flex-wrap:wrap" id="ant-filterbar">
+            <span class="evd-chip on" style="pointer-events:none">All events</span>
+            <span class="evd-chip" style="pointer-events:none">Last 24 h</span>
+            <span class="evd-chip" style="pointer-events:none">Camera ∨</span>
+            <span class="evd-chip" style="pointer-events:none">App ∨</span>
+          </div>
+          <table class="dtable">
+            <thead><tr><th class="zone" data-z="a">Event</th><th>Source</th><th>Type</th><th>Time</th><th class="zone" data-z="b">Status</th><th class="zone" data-z="d" style="text-align:right">Actions</th></tr></thead>
+            <tbody>
+              <tr><td class="mono zone" data-z="a">EVT-2841</td><td>Gate 2 — In</td><td>Vehicle · ANPR</td><td class="mono">14:02:11</td><td class="zone" data-z="b"><span class="st new">New</span></td><td class="zone" data-z="d" style="text-align:right"><span class="st res">View</span> <span class="st ack">Ack</span></td></tr>
+              <tr><td class="mono zone" data-z="a">EVT-2840</td><td>Lobby</td><td>Person · Loitering</td><td class="mono">13:58:47</td><td class="zone" data-z="b"><span class="st ack">Ack</span></td><td class="zone" data-z="d" style="text-align:right"><span class="st res">View</span></td></tr>
+              <tr><td class="mono zone" data-z="a">EVT-2839</td><td>Perimeter N</td><td>Person · Intrusion</td><td class="mono">13:51:02</td><td class="zone" data-z="b"><span class="st new">New</span></td><td class="zone" data-z="d" style="text-align:right"><span class="st res">View</span> <span class="st ack">Ack</span></td></tr>
+              <tr><td class="mono zone" data-z="a">EVT-2838</td><td>Loading Bay</td><td>Person · PPE</td><td class="mono">13:44:29</td><td class="zone" data-z="b"><span class="st res">Resolved</span></td><td class="zone" data-z="d" style="text-align:right"><span class="st res">View</span></td></tr>
+              <tr><td class="mono zone" data-z="a">EVT-2837</td><td>Gate 2 — Out</td><td>Vehicle · ANPR</td><td class="mono">13:40:15</td><td class="zone" data-z="b"><span class="st res">Resolved</span></td><td class="zone" data-z="d" style="text-align:right"><span class="st res">View</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <ul class="ant-list" id="ant-list">
+          <li data-zone="a"><span class="an-n">01</span><div><b>Primary identifier</b><span>Monospaced, persistent — scannable down the column without reading.</span></div></li>
+          <li data-zone="b"><span class="an-n">02</span><div><b>Status, recognisable at a glance</b><span>Colour + label + position. Important states never require reading a sentence.</span></div></li>
+          <li data-zone="c"><span class="an-n">03</span><div><b>Filters before scanning</b><span>Narrow the dataset before the eyes do the work.</span></div></li>
+          <li data-zone="d"><span class="an-n">04</span><div><b>Actions close to the record</b><span>Common actions live on the row — not behind a menu three clicks away.</span></div></li>
+        </ul>
+      </div>
+      <p class="m rv" style="margin-top:14px">Fig. 08 — one reconstructed table, four of its rules. Hover the notes.</p>
+    </div>
+  </div>
+
+  <!-- 08 DP5 / CONFIG -->
+  <div class="cs-sec">
+    <div class="wrap">
+      <div class="cs-num rv"><span class="n">08</span><h2>Problem 05 — configuration without fear.</h2></div>
+      <div class="cs-body" style="margin-bottom:clamp(28px,5vh,48px)">
+        <div class="txt rv">
+          <p>Setting up an AI application wasn't a form — it was a <b>workflow with dependencies</b>: application type, camera connections, detection settings, events, alerts, then deployment. The design job was to make a technically complex process legible: progressive disclosure, inline validation, dependencies resolved before they break things, and a review step before anything goes live.</p>
+        </div>
+        <div class="aside rv rv-d1">
+          <span class="m">Annotated decisions</span>
+          <ul>
+            <li>Progressive disclosure</li>
+            <li>Required vs optional, visible</li>
+            <li>Inline validation</li>
+            <li>Dependencies surfaced early</li>
+            <li>Confirmation · error · success states</li>
+          </ul>
+        </div>
+      </div>
+      <div class="stepper rv">
+        <div class="st8"><b>Select app</b><span>from 100+ catalogue or preset</span></div>
+        <div class="st8"><b>Configure AI</b><span>model · sensitivity · thresholds</span></div>
+        <div class="st8"><b>Connect cameras</b><span>one, many, or by location</span></div>
+        <div class="st8 key"><b>Define settings</b><span>required vs optional, validated inline</span></div>
+        <div class="st8"><b>Configure events</b><span>what counts as a detection</span></div>
+        <div class="st8"><b>Configure alerts</b><span>rules · recipients · channels</span></div>
+        <div class="st8 key"><b>Review</b><span>summary before anything goes live</span></div>
+        <div class="st8"><b>Deploy</b><span>edge or cloud, with status trail</span></div>
+      </div>
+      <p class="m rv" style="margin-top:14px">Fig. 09 — the 8-step configuration workflow, reconstructed</p>
+    </div>
+  </div>
+
+  <!-- 09 DESIGN SYSTEM -->
+  <div class="cs-sec">
+    <div class="wrap">
+      <div class="cs-num rv"><span class="n">09</span><h2>The design system — from screens to a system.</h2></div>
+      <div class="cs-body" style="margin-bottom:clamp(28px,5vh,48px)">
+        <div class="txt rv">
+          <p>As modules multiplied, inconsistencies crept in — similar interactions behaving differently on different screens. So I audited the product, grouped recurring behaviour, defined foundations, and rebuilt components around them: <b>buttons, inputs, dropdowns, tables, filters, cards, modals, navigation, status indicators, empty states</b>.</p>
+          <p>The point was never "a component library." It was a <b>shared language between design and engineering</b> — states defined per component, patterns documented, Figma and code using the same names.</p>
+        </div>
+        <div class="aside rv rv-d1">
+          <span class="m">How it was built</span>
+          <ul>
+            <li>Audit existing interfaces</li>
+            <li>Group recurring behaviour</li>
+            <li>Define foundations</li>
+            <li>Build components</li>
+            <li>Compose patterns</li>
+            <li>Connect Figma ↔ development</li>
+          </ul>
+        </div>
+      </div>
+      <div class="dsstack rv" id="dsstack">
+        <div class="dslayer dsw-1" tabindex="0"><span class="l-t">System</span><span class="l-s">one consistent, scalable product experience</span><div class="items"><i>Consistency</i><i>Scalability</i><i>Velocity</i></div></div>
+        <div class="dslayer dsw-2" tabindex="0"><span class="l-t">Product modules</span><span class="l-s">where patterns meet real workflows</span><div class="items"><i>Events</i><i>AI Apps</i><i>Cameras</i><i>Reports</i><i>Dashboard</i></div></div>
+        <div class="dslayer dsw-3" tabindex="0"><span class="l-t">Patterns</span><span class="l-s">components composed into behaviour</span><div class="items"><i>Filter bar</i><i>Data table</i><i>Config form</i><i>Alert panel</i><i>Empty state</i></div></div>
+        <div class="dslayer dsw-4" tabindex="0"><span class="l-t">Components</span><span class="l-s">reusable, state-complete</span><div class="items"><i>Buttons</i><i>Inputs</i><i>Tables</i><i>Cards</i><i>Modals</i><i>Badges</i></div></div>
+        <div class="dslayer dsw-5" tabindex="0"><span class="l-t">Foundations</span><span class="l-s">tokens everything else inherits</span><div class="items"><i>Type</i><i>Spacing</i><i>Grid</i><i>Colour</i><i>Radius</i><i>Elevation</i><i>Iconography</i></div></div>
+      </div>
+      <p class="m rv" style="margin-top:14px">Fig. 10 — click a layer to open it. Foundations at the base, by design.</p>
+    </div>
+  </div>
+
+  <!-- 10 DS 2.0 -->
+  <div class="cs-sec">
+    <div class="wrap">
+      <div class="cs-num rv"><span class="n">10</span><h2>The system gets a redesign too.</h2></div>
+      <div class="cols3" style="margin-top:8px">
+        <div class="rv">
+          <span class="m m--accent">v1 — built alongside</span>
+          <p style="color:var(--ink-70);margin-top:12px;font-size:15px">The first system grew module by module as the product did. It worked — until the product outgrew it.</p>
+        </div>
+        <div class="rv rv-d1">
+          <span class="m m--accent">what broke</span>
+          <p style="color:var(--ink-70);margin-top:12px;font-size:15px">Variants drifted. Tokens got bypassed. Patterns that worked once didn't survive contact with hundreds of workflows.</p>
+        </div>
+        <div class="rv rv-d2">
+          <span class="m m--accent">v2 — currently leading</span>
+          <p style="color:var(--ink-70);margin-top:12px;font-size:15px">Tokens first. States defined per component. Patterns documented. Figma and code referencing the same names — by rule, not by hope.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 11 ENGINEERING -->
+  <div class="cs-sec">
+    <div class="wrap">
+      <div class="cs-num rv"><span class="n">11</span><h2>Design didn't stop at Figma.</h2></div>
+      <div class="cs-body">
+        <div class="txt rv">
+          <p>I worked with the CTO and a 5–6 person frontend team from product definition to shipped code: technical constraints discussed early, workflows clarified before build, implementation reviewed, edge cases resolved, designs adjusted when feasibility demanded it — and consistency defended across every module.</p>
+          <p>That closeness was a design tool. It's part of why development-phase errors dropped and delivery sped up: <b>fewer surprises survived to code.</b></p>
+        </div>
+        <div class="aside rv rv-d1">
+          <span class="m">How it showed up</span>
+          <ul>
+            <li>Feasibility as a design input</li>
+            <li>Design reviews on built screens</li>
+            <li>Edge cases owned jointly</li>
+            <li>~20% faster delivery</li>
+          </ul>
+        </div>
+      </div>
+      <div class="pull rv" style="margin-top:clamp(32px,5vh,56px)">
+        <span class="q">My role —</span> not to hand off finished screens, but to make sure the product logic and interaction detail survived the trip from Figma to production.
+      </div>
+    </div>
+  </div>
+
+  <!-- 12 DETAILS -->
+  <div class="cs-sec">
+    <div class="wrap">
+      <div class="cs-num rv"><span class="n">12</span><h2>Small details, compounding.</h2></div>
+      <p class="rv" style="max-width:62ch;color:var(--ink-70);margin-bottom:clamp(28px,5vh,44px)">A platform is judged by its quietest moments. Flip each one — before is how it was, after is what it became.</p>
+      <div class="dt-grid rv" id="dtgrid">
+        <div class="dt-card" data-state="before">
+          <div class="dt-switch" role="group" aria-label="Toggle before and after"><button class="on" data-s="before">Before</button><button data-s="after">After</button></div>
+          <h4>Event filtering</h4>
+          <p class="dt-txt dt-bfr">A chronological stream, scanned by eye, row by row.</p>
+          <p class="dt-aft">Filter first — narrow by camera, app, type and time before scanning a single row.</p>
+          <span class="aft-badge">✓ Shipped</span>
+        </div>
+        <div class="dt-card" data-state="before">
+          <div class="dt-switch" role="group" aria-label="Toggle before and after"><button class="on" data-s="before">Before</button><button data-s="after">After</button></div>
+          <h4>Empty states</h4>
+          <p class="dt-txt dt-bfr">Blank panels when a filter matched nothing. Silence.</p>
+          <p class="dt-aft">Every empty state explains itself and offers the next action.</p>
+          <span class="aft-badge">✓ Shipped</span>
+        </div>
+        <div class="dt-card" data-state="before">
+          <div class="dt-switch" role="group" aria-label="Toggle before and after"><button class="on" data-s="before">Before</button><button data-s="after">After</button></div>
+          <h4>Form validation</h4>
+          <p class="dt-txt dt-bfr">Errors surfaced on submit — far from their cause.</p>
+          <p class="dt-aft">Errors visible at the field, at the moment they occur.</p>
+          <span class="aft-badge">✓ Shipped</span>
+        </div>
+        <div class="dt-card" data-state="before">
+          <div class="dt-switch" role="group" aria-label="Toggle before and after"><button class="on" data-s="before">Before</button><button data-s="after">After</button></div>
+          <h4>Status indicators</h4>
+          <p class="dt-txt dt-bfr">Each module invented its own language for state.</p>
+          <p class="dt-aft">One consistent pattern — colour, label, position — across the platform.</p>
+          <span class="aft-badge">✓ Shipped</span>
+        </div>
+        <div class="dt-card" data-state="before">
+          <div class="dt-switch" role="group" aria-label="Toggle before and after"><button class="on" data-s="before">Before</button><button data-s="after">After</button></div>
+          <h4>Navigation</h4>
+          <p class="dt-txt dt-bfr">Global navigation and contextual actions blurred together.</p>
+          <p class="dt-aft">Stable global structure; context lives exactly where the work happens.</p>
+          <span class="aft-badge">✓ Shipped</span>
+        </div>
+        <div class="dt-card" data-state="before">
+          <div class="dt-switch" role="group" aria-label="Toggle before and after"><button class="on" data-s="before">Before</button><button data-s="after">After</button></div>
+          <h4>Data density</h4>
+          <p class="dt-txt dt-bfr">Tables showed everything, equally, always.</p>
+          <p class="dt-aft">Hierarchy, density and scanning tuned per task — compare rows, not paragraphs.</p>
+          <span class="aft-badge">✓ Shipped</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 13 IMPACT -->
+  <div class="cs-sec">
+    <div class="wrap">
+      <div class="cs-num rv"><span class="n">13</span><h2>What it added up to.</h2></div>
+      <div class="stats rv" style="margin-bottom:26px">
+        <div class="stat hot"><span class="num-big">5–6→1</span><span class="m lbl">client dashboards consolidated</span></div>
+        <div class="stat"><span class="num-big"><span class="count" data-to="100">0</span>+</span><span class="m lbl">AI applications supported</span></div>
+        <div class="stat"><span class="num-big">30–40</span><span class="m lbl">clients migrated</span></div>
+        <div class="stat"><span class="num-big"><span class="count" data-to="500">0</span>+</span><span class="m lbl">live deployments</span></div>
+        <div class="stat"><span class="num-big"><span class="count" data-to="26">0</span>%</span><span class="m lbl">fewer development-phase errors*</span></div>
+      </div>
+      <p class="rv" style="max-width:64ch;color:var(--ink-70)">Ikshana became the single platform for every existing client deployment — replacing their previous dashboards — and the foundation the product has kept growing on since.</p>
+      <p class="m rv" style="margin-top:14px">*Measured across development phases during the unified platform build. Methodology available on request.</p>
+    </div>
+  </div>
+
+  <!-- 14 LEARNINGS -->
+  <div class="cs-sec">
+    <div class="wrap">
+      <div class="cs-num rv"><span class="n">14</span><h2>What the project taught me.</h2></div>
+      <div class="learn rv">
+        <div><span class="n">01</span><h4>Complexity isn't solved by hiding information.</h4><p>It's solved by structuring information around user goals and context.</p></div>
+        <div><span class="n">02</span><h4>Systems matter more as products scale.</h4><p>A pattern that works once isn't automatically a pattern that works across hundreds of workflows.</p></div>
+        <div><span class="n">03</span><h4>Enterprise UX means understanding the system behind the screen.</h4><p>Design decisions depend on backend logic, permissions, data relationships and technical constraints.</p></div>
+        <div><span class="n">04</span><h4>Small interaction decisions compound.</h4><p>Filtering, states, hierarchy and feedback make a complex product significantly easier to operate.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 15 END -->
+  <div class="cs-sec">
+    <div class="wrap">
+      <div class="pull rv">Ikshana evolved from a collection of client-specific dashboards into a unified enterprise platform — and my role grew with it: workflows, interfaces, design system, engineering, direction.</div>
+      <a class="next-proj rv" href="#/work/bike" style="margin-top:clamp(40px,7vh,80px)">
+        <div class="inner">
+          <div>
+            <span class="m">Next case study — 0→1 · sole ownership · mobile</span>
+            <h3>Bike Service Platform</h3>
+          </div>
+          <span class="arw-big" aria-hidden="true">→</span>
+        </div>
+      </a>
+    </div>
+  </div>
+
+</section>
+
+<!-- ================================================================
+     VIEW — CASE STUDY 02 : BIKE SERVICE PLATFORM
+     ================================================================ -->
+<section class="view" id="view-bike" data-title="Bike Service Platform — Sumedha Chouhan">
+
+  <div class="cs-hero">
+    <div class="wrap">
+      <span class="m m--accent">Case Study 02 &nbsp;·&nbsp; Product Design · Mobile + Web · 0→1 · Two-sided</span>
+      <div class="tags">
+        <span class="tag">Sole Designer</span><span class="tag">Two-sided Marketplace</span><span class="tag">Mobile</span><span class="tag">Design System</span><span class="tag">45+ Prototypes</span>
+      </div>
+      <h1>Bike Service<br>Platform</h1>
+      <p class="sub">A two-sided platform for riders and garage managers — designed from zero, end to end, by one designer.</p>
+
+      <div class="meta-grid rv">
+        <div><span class="m">Role</span><p>Sole UI/UX designer — product, system, everything</p></div>
+        <div><span class="m">Timeline</span><p>Nov 2022 — Jan 2023 (Mechanify)</p></div>
+        <div><span class="m">Team</span><p>Founders · developers — design function of one</p></div>
+        <div><span class="m">Scope</span><p>IA · flows · UI · design system · 45+ prototypes</p></div>
+      </div>
+
+      <div class="wrap" style="margin-top:clamp(36px,6vh,64px);padding-left:0;padding-right:0">
+        <div class="fig rv">
+          <div class="phones" style="padding:34px 14px;gap:26px">
+            <div class="phone"><div class="scr">
+              <div class="notch"></div>
+              <div class="ph-status"><span>9:41</span><span>4G · 87%</span></div>
+              <div class="ph-head">Your ride<small>Rider app</small></div>
+              <div class="ph-card"><b>Next service · due in 12 days</b>
+                <div class="row"><span>Classic 350 — 8,412 km</span><span class="pill warn">Due soon</span></div>
+              </div>
+              <div class="ph-card"><b>Documents</b>
+                <div class="row"><span>DL · RC · Insurance</span><span class="pill ok">Verified</span></div>
+              </div>
+              <div class="ph-card"><b>Membership — Basic</b>
+                <div class="row"><span>10% off labour</span><span class="pill mut">Active</span></div>
+              </div>
+              <div class="ph-cta">Book a service</div>
+              <div class="ph-nav"><i class="on">Home</i><i>Docs</i><i>Shop</i><i>More</i></div>
+            </div></div>
+            <div class="phone"><div class="scr">
+              <div class="notch"></div>
+              <div class="ph-status"><span>9:41</span><span>Wi-Fi · 62%</span></div>
+              <div class="ph-head">Job queue<small>Garage console</small></div>
+              <div class="ph-card"><b>JOB #1042 — Full service</b>
+                <div class="row"><span>Pickup · 11:30</span><span class="pill warn">In progress</span></div>
+              </div>
+              <div class="ph-card"><b>JOB #1041 — Oil change</b>
+                <div class="row"><span>Walk-in · 10:15</span><span class="pill ok">Done</span></div>
+              </div>
+              <div class="ph-card"><b>Parts ordered — chain kit</b>
+                <div class="row"><span>ETA tomorrow</span><span class="pill mut">Pending</span></div>
+              </div>
+              <div class="ph-cta acc">Update status</div>
+              <div class="ph-nav"><i class="on">Jobs</i><i>Parts</i><i>Payouts</i><i>Team</i></div>
+            </div></div>
+          </div>
+          <div class="fig-cap"><span><b>Fig. 11</b> — The two faces of one system</span><span>Rider · Garage</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 01 TWO MENTAL MODELS -->
+  <div class="cs-sec">
+    <div class="wrap">
+      <div class="cs-num rv"><span class="n">01</span><h2>Two users. Two mental models. One system.</h2></div>
+      <p class="rv" style="max-width:62ch;color:var(--ink-70);margin-bottom:clamp(28px,5vh,48px)">The rider thinks in journeys — <em class="t">my bike, my money, my time</em>. The garage thinks in throughput — <em class="t">jobs, parts, people</em>. Same product, opposite gravity. The design had to honour both without becoming two products.</p>
+      <div class="split rv">
+        <div class="half">
+          <span class="m who">Rider — wants control</span>
+          <h4>"Take care of my bike."</h4>
+          <ol class="vflow">
+            <li><i>1</i>Discover service <span>what does my bike need?</span></li>
+            <li><i>2</i>Book <span>pickup or drop-off</span></li>
+            <li><i>3</i>Pay <span>upfront estimate · no surprises</span></li>
+            <li><i>4</i>Track <span>live job status</span></li>
+            <li><i>5</i>Manage <span>documents · insurance · membership</span></li>
+          </ol>
+        </div>
+        <div class="mid" aria-hidden="true"><span>ONE SYSTEM</span></div>
+        <div class="half">
+          <span class="m who">Garage — wants throughput</span>
+          <h4>"Keep the bay moving."</h4>
+          <ol class="vflow">
+            <li><i>1</i>Receive <span>incoming job, assigned bay</span></li>
+            <li><i>2</i>Manage <span>parts, mechanics, priorities</span></li>
+            <li><i>3</i>Service <span>checklist per job type</span></li>
+            <li><i>4</i>Update <span>status the rider can see</span></li>
+            <li><i>5</i>Complete <span>settle payment · history</span></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 02 BREADTH -->
+  <div class="cs-sec">
+    <div class="wrap">
+      <div class="cs-num rv"><span class="n">02</span><h2>The product was bigger than an app.</h2></div>
+      <p class="rv" style="max-width:62ch;color:var(--ink-70);margin-bottom:clamp(28px,5vh,48px)">"Bike servicing" turned out to mean payments, vehicle documents, insurance tracking, memberships — and eventually, commerce. Designing the map first kept every piece from becoming its own app.</p>
+      <div class="breadth rv">
+        <div class="bnode"><b>Service<br>booking</b><span>slotting · pickup · live status</span></div>
+        <div class="bnode"><b>Payments</b><span>estimates · bills · history</span></div>
+        <div class="bnode"><b>Vehicle<br>documents</b><span>DL · RC · service log</span></div>
+        <div class="bnode"><b>Insurance</b><span>policies · renewals · claims</span></div>
+        <div class="bnode"><b>Member-<br>ships</b><span>plans · perks · retention</span></div>
+        <div class="bnode"><b>E-commerce</b><span>parts · accessories</span></div>
+      </div>
+      <p class="m rv" style="margin-top:14px">Fig. 12 — product surface map</p>
+    </div>
+  </div>
+
+  <!-- 03 SYSTEM FROM SCRATCH -->
+  <div class="cs-sec">
+    <div class="wrap">
+      <div class="cs-num rv"><span class="n">03</span><h2>A design system before there were screens.</h2></div>
+      <p class="rv" style="max-width:62ch;color:var(--ink-70);margin-bottom:clamp(28px,5vh,48px)">With one designer and many surfaces, consistency couldn't be a mood — it had to be infrastructure. Foundations first, then components, so rider and garage never felt like different companies.</p>
+      <div class="found rv">
+        <div>
+          <h5>Colour</h5>
+          <div class="sw-row">
+            <span class="sw" style="background:#17150F"></span><span class="sw" style="background:#E8471C"></span><span class="sw" style="background:#3E8E5F"></span><span class="sw" style="background:#5D8CFF"></span><span class="sw" style="background:#E5A50A"></span><span class="sw" style="background:#F5F2EA;border-color:rgba(23,21,15,.3)"></span>
+          </div>
+          <p style="font-size:13px;color:var(--ink-70);margin-top:14px">Semantic roles — status, action, surface — defined once, used everywhere.</p>
+        </div>
+        <div>
+          <h5>Type scale</h5>
+          <div class="tsrow"><span class="t1" style="font-size:26px;font-weight:500">Aa</span><span class="t2">Display / 26</span></div>
+          <div class="tsrow"><span class="t1" style="font-size:19px;font-weight:500">Aa</span><span class="t2">Title / 19</span></div>
+          <div class="tsrow"><span class="t1" style="font-size:15px">Aa</span><span class="t2">Body / 15</span></div>
+          <div class="tsrow"><span class="t1" style="font-size:11px;font-family:var(--mono)">Aa</span><span class="t2">Mono / 11</span></div>
+        </div>
+        <div>
+          <h5>Spacing &amp; radius</h5>
+          <div class="sp-row">
+            <i style="width:8px"></i><i style="width:16px"></i><i style="width:24px"></i><i style="width:32px"></i><i style="width:48px"></i>
+          </div>
+          <p style="font-size:13px;color:var(--ink-70);margin-top:14px">A 4-pt rhythm and three radii. Nothing invented at 2 a.m.</p>
+        </div>
+      </div>
+      <div class="comp-chips rv" style="margin-top:20px">
+        <i>Buttons</i><i>Inputs</i><i>Cards</i><i>Job rows</i><i>Status pills</i><i>Tabs</i><i>Bottom nav</i><i>Modals</i><i>Empty states</i><i>Document cards</i>
+      </div>
+    </div>
+  </div>
+
+  <!-- 04 DOCUMENTS -->
+  <div class="cs-sec">
+    <div class="wrap">
+      <div class="cs-num rv"><span class="n">04</span><h2>Documents that feel official.</h2></div>
+      <div class="cs-body">
+        <div class="txt rv">
+          <p>Virtual DL and RC were the quiet killer feature — but government-adjacent documents carry a design burden: they must feel <b>credible, verifiable and always at hand</b>.</p>
+          <p>So the document card borrowed the visual grammar of the real thing — hierarchy, seal, structure — and added what paper can't do: <b>live verification state, expiry awareness</b>, and one-tap access from anywhere in the product.</p>
+          <p>The same pattern extended to insurance policies and service history: one document system, not four one-offs.</p>
+        </div>
+        <div class="rv rv-d1">
+          <div class="fig">
+            <div class="phones" style="padding:26px 14px;justify-content:center">
+              <div class="phone"><div class="scr">
+                <div class="notch"></div>
+                <div class="ph-status"><span>9:41</span><span>4G · 80%</span></div>
+                <div class="ph-head">Documents<small>Rider · verified wallet</small></div>
+                <div class="ph-card" style="border-left:3px solid var(--accent)">
+                  <b>Driving Licence</b>
+                  <div class="ph-bars" style="padding:8px 0 0"><i style="width:70%"></i><i style="width:50%"></i></div>
+                  <div class="row" style="margin-top:8px"><span class="pill ok">Verified</span><span class="pill mut">Expires 2029</span></div>
+                </div>
+                <div class="ph-card">
+                  <b>Registration — RC</b>
+                  <div class="row" style="margin-top:6px"><span>Classic 350 · DL5S…</span><span class="pill ok">Verified</span></div>
+                </div>
+                <div class="ph-card">
+                  <b>Insurance</b>
+                  <div class="row" style="margin-top:6px"><span>Comprehensive</span><span class="pill warn">142 days</span></div>
+                </div>
+                <div class="ph-cta">Show QR at pickup</div>
+                <div class="ph-nav"><i>Home</i><i class="on">Docs</i><i>Shop</i><i>More</i></div>
+              </div></div>
+            </div>
+            <div class="fig-cap"><span><b>Fig. 13</b> — the documents wallet</span><span>DL · RC · Insurance</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 05 ECOMMERCE -->
+  <div class="cs-sec">
+    <div class="wrap">
+      <div class="cs-num rv"><span class="n">05</span><h2>Exploring past the brief.</h2></div>
+      <p class="rv" style="max-width:62ch;color:var(--ink-70);margin-bottom:clamp(28px,5vh,44px)">Service retention creates a natural storefront — owners already trust the platform with their bike. I explored an e-commerce experience for parts and accessories: explored, prototyped, not shipped. That's what product thinking looks like before it's a roadmap item.</p>
+      <div class="breadth rv" style="grid-template-columns:repeat(5,1fr)">
+        <div class="bnode"><b>Tyres</b><span>fitment-aware</span></div>
+        <div class="bnode"><b>Chains &amp; sprockets</b><span>by model</span></div>
+        <div class="bnode"><b>Oils &amp; fluids</b><span>service-linked</span></div>
+        <div class="bnode"><b>Helmets</b><span>safety rated</span></div>
+        <div class="bnode"><b>Accessories</b><span>curated</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 06 PROTOTYPES -->
+  <div class="cs-sec">
+    <div class="wrap">
+      <div class="cs-num rv"><span class="n">06</span><h2><span class="count" data-to="45">0</span>+ prototypes before a line of code.</h2></div>
+      <div class="cs-body" style="margin-bottom:clamp(28px,5vh,44px)">
+        <div class="txt rv">
+          <p>As the sole designer, prototypes were my argument — with founders, with developers, with myself. Ideas were built, clicked through, and judged <b>before development spent a day on them</b>.</p>
+          <p>45+ interactive prototypes later, the product that reached developers had already survived its worst ideas.</p>
+        </div>
+        <div class="aside rv rv-d1">
+          <span class="m">What prototyping bought</span>
+          <ul>
+            <li>Founders aligned on flows, not adjectives</li>
+            <li>Developers built the agreed thing</li>
+            <li>Bad ideas died cheap</li>
+          </ul>
+        </div>
+      </div>
+      <div class="wfgrid rv" id="wfgrid">
+        <div class="wft"><svg viewBox="0 0 100 75"><rect class="fillc" x="8" y="8" width="84" height="18" rx="3"/><rect class="linec" x="8" y="32" width="38" height="35" rx="3"/><rect class="linec" x="54" y="32" width="38" height="15" rx="3"/><rect class="linec" x="54" y="52" width="38" height="15" rx="3"/></svg></div>
+        <div class="wft"><svg viewBox="0 0 100 75"><circle class="linec" cx="50" cy="26" r="14"/><rect class="linec" x="14" y="48" width="72" height="6"/><rect class="acc" x="14" y="60" width="30" height="6"/></svg></div>
+        <div class="wft"><svg viewBox="0 0 100 75"><rect class="linec" x="10" y="10" width="80" height="14"/><rect class="linec" x="10" y="30" width="80" height="14"/><rect class="linec" x="10" y="50" width="52" height="14"/><rect class="acc" x="66" y="50" width="24" height="14"/></svg></div>
+        <div class="wft"><svg viewBox="0 0 100 75"><rect class="linec" x="12" y="8" width="34" height="59" rx="4"/><rect class="linec" x="54" y="8" width="34" height="26" rx="4"/><rect class="linec" x="54" y="41" width="34" height="26" rx="4"/><circle class="acc" cx="29" cy="24" r="6" fill="#E8471C"/></svg></div>
+        <div class="wft"><svg viewBox="0 0 100 75"><path class="linec" d="M12 60 L34 38 L52 50 L88 18"/><circle class="acc" cx="52" cy="50" r="4" fill="#E8471C"/></svg></div>
+        <div class="wft"><svg viewBox="0 0 100 75"><rect class="fillc" x="8" y="30" width="26" height="37" rx="3"/><rect class="linec" x="40" y="30" width="26" height="37" rx="3"/><rect class="linec" x="72" y="30" width="20" height="37" rx="3"/><rect class="linec" x="8" y="10" width="84" height="12"/></svg></div>
+        <div class="wft"><svg viewBox="0 0 100 75"><rect class="linec" x="20" y="10" width="60" height="55" rx="5"/><line class="linec" x1="28" y1="24" x2="72" y2="24"/><line class="linec" x1="28" y1="36" x2="60" y2="36"/><rect class="acc" x="28" y="46" width="22" height="10"/></svg></div>
+        <div class="wft"><svg viewBox="0 0 100 75"><rect class="linec" x="10" y="14" width="80" height="48" rx="3"/><line class="linec" x1="10" y1="28" x2="90" y2="28"/><circle class="linec" cx="82" cy="21" r="3"/><rect class="fillc" x="16" y="34" width="20" height="20"/></svg></div>
+        <div class="wft"><svg viewBox="0 0 100 75"><path class="linec" d="M14 20 h72 M14 38 h72 M14 56 h48"/><circle class="acc" cx="30" cy="20" r="4" fill="#E8471C"/></svg></div>
+        <div class="wft"><svg viewBox="0 0 100 75"><rect class="linec" x="10" y="10" width="40" height="26" rx="3"/><rect class="linec" x="10" y="42" width="40" height="23" rx="3"/><rect class="linec" x="58" y="10" width="32" height="55" rx="3"/><line class="linec" x1="64" y1="20" x2="84" y2="20"/><line class="linec" x1="64" y1="28" x2="84" y2="28"/></svg></div>
+        <div class="wft"><svg viewBox="0 0 100 75"><circle class="linec" cx="50" cy="37" r="20"/><line class="linec" x1="50" y1="17" x2="50" y2="57"/><line class="linec" x1="30" y1="37" x2="70" y2="37"/></svg></div>
+        <div class="wft"><svg viewBox="0 0 100 75"><rect class="linec" x="14" y="12" width="72" height="16" rx="8"/><rect class="linec" x="14" y="36" width="72" height="16" rx="8"/><rect class="linec" x="14" y="60" width="72" height="10" rx="5"/></svg></div>
+      </div>
+      <p class="m rv" style="margin-top:14px">Fig. 14 — fragments from the prototype pile, abstracted</p>
+    </div>
+  </div>
+
+  <!-- 07 REFLECTION -->
+  <div class="cs-sec">
+    <div class="wrap">
+      <div class="cs-num rv"><span class="n">07</span><h2>What being the only designer teaches you.</h2></div>
+      <div class="cols3" style="margin-top:8px">
+        <div class="rv"><span class="m m--accent">Own the why</span><p style="color:var(--ink-70);margin-top:12px;font-size:15px">With no one to defer to, every decision needed a reason I could defend — to founders, to developers, to the version of me reviewing it a week later.</p></div>
+        <div class="rv rv-d1"><span class="m m--accent">Systems are survival</span><p style="color:var(--ink-70);margin-top:12px;font-size:15px">A sole designer can't police consistency by memory. The system is what lets one person design a two-sided product without it fracturing.</p></div>
+        <div class="rv rv-d2"><span class="m m--accent">Prototype to communicate</span><p style="color:var(--ink-70);margin-top:12px;font-size:15px">A clickable flow ends arguments that a static screen — or a paragraph — never could. 45+ of them were really 45+ conversations, pre-had.</p></div>
+      </div>
+      <a class="next-proj rv" href="#/work/wellness" style="margin-top:clamp(40px,7vh,80px)">
+        <div class="inner">
+          <div>
+            <span class="m">Next case study — consumer UX · service journey · UAE</span>
+            <h3>Physiotherapy &amp; Wellness</h3>
+          </div>
+          <span class="arw-big" aria-hidden="true">→</span>
+        </div>
+      </a>
+    </div>
+  </div>
+
+</section>
+
+<!-- ================================================================
+     VIEW — CASE STUDY 03 : UAE WELLNESS
+     ================================================================ -->
+<section class="view" id="view-wellness" data-title="Physiotherapy & Wellness — Sumedha Chouhan">
+
+  <div class="cs-hero">
+    <div class="wrap">
+      <span class="m m--accent">Case Study 03 &nbsp;·&nbsp; Product Design · Mobile · Consumer · UAE</span>
+      <div class="tags">
+        <span class="tag">Consumer UX</span><span class="tag">Service Journey</span><span class="tag">Booking</span><span class="tag">Healthcare</span>
+      </div>
+      <h1>Physiotherapy<br>&amp; Wellness</h1>
+      <p class="sub">At-home physiotherapy for a UAE client — discovered, trusted and booked in a few taps.</p>
+
+      <div class="meta-grid rv">
+        <div><span class="m">Role</span><p>Product designer — end-to-end mobile experience</p></div>
+        <div><span class="m">Market</span><p>UAE · consumer · at-home healthcare</p></div>
+        <div><span class="m">Platform</span><p>Mobile — discovery to booking</p></div>
+        <div><span class="m">Focus</span><p>Service journey · trust · booking flow</p></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 01 CONTEXT -->
+  <div class="cs-sec">
+    <div class="wrap">
+      <div class="cs-num rv"><span class="n">01</span><h2>A booking app that was really a trust product.</h2></div>
+      <div class="cs-body">
+        <div class="txt rv">
+          <p>The client offered at-home physiotherapy across the UAE. The brief said "booking app." The real problem said something else: <b>a stranger enters your home, in pain's name</b>.</p>
+          <p>Every design decision followed from that: credentials before price, transparent costs before confirmation, respectful time windows, and a calm interface — because in healthcare, calm reads as competence.</p>
+        </div>
+        <div class="aside rv rv-d1">
+          <span class="m">What the journey needed</span>
+          <ul>
+            <li>Discovery by condition, not catalogue</li>
+            <li>Credentials, visible and verifiable</li>
+            <li>Pricing with no fine print</li>
+            <li>Booking that respects the home</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 02 JOURNEY -->
+  <div class="cs-sec">
+    <div class="wrap">
+      <div class="cs-num rv"><span class="n">02</span><h2>The service journey.</h2></div>
+      <div class="journey rv" style="margin-top:8px">
+        <div class="j"><i>STEP 01</i><b>Need</b><span>Pain or plan — the entry point is the condition, not a therapist list.</span></div>
+        <div class="j"><i>STEP 02</i><b>Discover</b><span>Matched therapists — speciality, licensing, ratings.</span></div>
+        <div class="j"><i>STEP 03</i><b>Choose</b><span>Profile, price, availability — comparable at a glance.</span></div>
+        <div class="j"><i>STEP 04</i><b>Book &amp; pay</b><span>Time window, address, payment — three screens, not nine.</span></div>
+        <div class="j"><i>STEP 05</i><b>Follow-up</b><span>Session notes, plan, rebooking in one tap.</span></div>
+      </div>
+      <p class="m rv" style="margin-top:14px">Fig. 15 — the five-beat journey the product was structured around</p>
+    </div>
+  </div>
+
+  <!-- 03 BOOKING FLOW -->
+  <div class="cs-sec">
+    <div class="wrap">
+      <div class="cs-num rv"><span class="n">03</span><h2>The booking flow — calm, in four screens.</h2></div>
+      <div class="fig rv" style="margin-top:8px">
+        <div class="phones" style="gap:18px">
+          <div class="phone"><div class="scr">
+            <div class="notch"></div>
+            <div class="ph-status"><span>9:41</span><span>4G</span></div>
+            <div class="ph-head">Choose<small>Matched for back pain</small></div>
+            <div class="ph-card"><b>Dr. Aisha K.</b><div class="row"><span>9 yrs · MSK</span><span class="pill ok">DHA</span></div></div>
+            <div class="ph-card"><b>Dr. Omar S.</b><div class="row"><span>7 yrs · Sports</span><span class="pill ok">DHA</span></div></div>
+            <div class="ph-cta">Continue</div>
+            <div class="ph-nav"><i class="on">1</i><i>2</i><i>3</i><i>4</i></div>
+          </div></div>
+          <div class="phone"><div class="scr">
+            <div class="notch"></div>
+            <div class="ph-status"><span>9:41</span><span>4G</span></div>
+            <div class="ph-head">When<small>Dr. Aisha · AED 220</small></div>
+            <div class="ph-card"><b>Tuesday</b><div class="row"><span>4:30 · 5:30 · 7:00</span><span class="pill mut">PM</span></div></div>
+            <div class="ph-card"><b>Wednesday</b><div class="row"><span>10:00 · 11:30</span><span class="pill mut">AM</span></div></div>
+            <div class="ph-cta">Continue</div>
+            <div class="ph-nav"><i class="on">1</i><i class="on">2</i><i>3</i><i>4</i></div>
+          </div></div>
+          <div class="phone"><div class="scr">
+            <div class="notch"></div>
+            <div class="ph-status"><span>9:41</span><span>4G</span></div>
+            <div class="ph-head">Confirm<small>Villa 12 · Al Barsha</small></div>
+            <div class="ph-card"><b>45-min session · AED 220</b><div class="row"><span>All inclusive</span><span class="pill ok">No extras</span></div></div>
+            <div class="ph-card"><b>Payment</b><div class="row"><span>•••• 4821</span><span class="pill mut">Saved</span></div></div>
+            <div class="ph-cta acc">Confirm booking</div>
+            <div class="ph-nav"><i class="on">1</i><i class="on">2</i><i class="on">3</i><i>4</i></div>
+          </div></div>
+          <div class="phone"><div class="scr">
+            <div class="notch"></div>
+            <div class="ph-status"><span>9:41</span><span>4G</span></div>
+            <div class="ph-head" style="text-align:center;padding-top:18px">Booked ✓</div>
+            <div class="ph-card" style="text-align:center"><b>Tue · 5:30 PM</b><div class="row" style="justify-content:center"><span>Dr. Aisha is coming to you</span></div></div>
+            <div class="ph-card" style="text-align:center"><span class="pill ok">ID verified on arrival</span></div>
+            <div class="ph-cta">Add to calendar</div>
+            <div class="ph-nav"><i class="on">1</i><i class="on">2</i><i class="on">3</i><i class="on">4</i></div>
+          </div></div>
+        </div>
+        <div class="fig-cap"><span><b>Fig. 16</b> — booking: credentials first, price second, calm throughout</span><span>Reconstructed</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 04 LEARNINGS -->
+  <div class="cs-sec">
+    <div class="wrap">
+      <div class="cs-num rv"><span class="n">04</span><h2>What stayed with me.</h2></div>
+      <div class="cols2" style="margin-top:8px">
+        <div class="rv"><span class="m m--accent">Clarity is a feature</span><p style="color:var(--ink-70);margin-top:12px;font-size:15px">In healthcare, an unexplained fee or a vague time window isn't a UX irritation — it's a reason to abandon. Clarity converts.</p></div>
+        <div class="rv rv-d1"><span class="m m--accent">Calm reads as competence</span><p style="color:var(--ink-70);margin-top:12px;font-size:15px">Nothing on the screen should outrank the user's reason for being there. Restraint is the visual strategy.</p></div>
+      </div>
+      <a class="next-proj rv" href="#/visual" style="margin-top:clamp(40px,7vh,80px)">
+        <div class="inner">
+          <div>
+            <span class="m">Next — the second discipline</span>
+            <h3>Visual &amp; Brand Work</h3>
+          </div>
+          <span class="arw-big" aria-hidden="true">→</span>
+        </div>
+      </a>
+    </div>
+  </div>
+
+</section>
+
+<!-- ================================================================
+     VIEW — VISUAL & BRAND WORK
+     ================================================================ -->
+<section class="view" id="view-visual" data-title="Visual & Brand Work — Sumedha Chouhan">
+
+  <div class="cs-hero">
+    <div class="wrap">
+      <span class="m m--accent">02 — Visual Design</span>
+      <h1 style="margin-top:18px">The second<br>discipline.</h1>
+      <p class="sub">Marketing, communication, web and brand — kept in its own room so the product story stays clean.</p>
+      <p class="rv" style="max-width:60ch;color:var(--ink-70);margin-top:26px;font-size:15px">Frames below are placeholders styled as specimens — swap each with the real artwork, tagged by category. Selected archive available on request.</p>
+
+      <!-- To add real work: replace the contents of a .art div with
+           <img src="your-image.jpg" alt="..."> keeping the .cap bar. -->
+
+      <div class="gal-filters rv" id="galfilters" style="margin-top:clamp(30px,5vh,52px)">
+        <button class="gchip on" data-f="all">All</button>
+        <button class="gchip" data-f="marketing">Marketing</button>
+        <button class="gchip" data-f="communication">Communication</button>
+        <button class="gchip" data-f="web">Web</button>
+        <button class="gchip" data-f="brand">Brand</button>
+      </div>
+
+      <div class="gal" id="gal">
+        <div class="spec rv" data-cat="marketing">
+          <div class="art"><div class="a-in"><span class="a-big" style="font-size:clamp(26px,3vw,42px)">LAUNCH<br>DAY<span class="a-acc">.</span></span><div class="a-rule"></div><span class="a-sm">Social campaign · series of 6</span></div></div>
+          <div class="cap"><b>Social campaign</b><span>Marketing · '24</span></div>
+        </div>
+        <div class="spec rv" data-cat="communication">
+          <div class="art"><div class="a-in"><span class="a-sm" style="margin:0 0 10px">Q3 — REVIEW</span><span class="a-big" style="font-size:clamp(30px,3.4vw,48px)">12 slides,<br>one story.</span><div class="a-rule"></div><span class="a-sm">Presentation system</span></div></div>
+          <div class="cap"><b>Presentation deck</b><span>Communication</span></div>
+        </div>
+        <div class="spec rv" data-cat="web">
+          <div class="art"><div class="a-in"><span class="a-big" style="font-size:clamp(26px,3vw,42px)">Ikshana<br><span class="a-acc" style="font-style:italic">sees</span> everything.</span><div class="a-rule"></div><span class="a-sm">Marketing website · hero</span></div></div>
+          <div class="cap"><b>Website design</b><span>Web · '24</span></div>
+        </div>
+        <div class="spec rv" data-cat="brand">
+          <div class="art"><div class="a-in"><span class="a-big" style="font-size:clamp(40px,4.6vw,64px)">Aa<span class="a-acc">.</span></span><div class="a-rule"></div><span class="a-sm">Type · colour · mark — identity support</span></div></div>
+          <div class="cap"><b>Visual system</b><span>Brand</span></div>
+        </div>
+        <div class="spec rv" data-cat="marketing">
+          <div class="art"><div class="a-in"><span class="a-sm" style="margin:0 0 10px">NEW — EVENT RULES</span><span class="a-big" style="font-size:clamp(24px,2.8vw,38px)">Fewer alerts,<br>better ones.</span><div class="a-rule"></div><span class="a-sm">Product announcement</span></div></div>
+          <div class="cap"><b>Announcement kit</b><span>Marketing</span></div>
+        </div>
+        <div class="spec rv" data-cat="communication">
+          <div class="art"><div class="a-in"><span class="a-big" style="font-size:clamp(24px,2.8vw,38px)">Case<br>closed<span class="a-acc">.</span></span><div class="a-rule"></div><span class="a-sm">Written case study · layout system</span></div></div>
+          <div class="cap"><b>Case study layout</b><span>Communication</span></div>
+        </div>
+        <div class="spec rv" data-cat="web">
+          <div class="art"><div class="a-in"><span class="a-big" style="font-size:clamp(26px,3vw,42px)">Book it.<br>Fix it.<br><span class="a-acc" style="font-style:italic">Ride.</span></span><div class="a-rule"></div><span class="a-sm">Campaign landing page</span></div></div>
+          <div class="cap"><b>Landing page</b><span>Web</span></div>
+        </div>
+        <div class="spec rv" data-cat="brand communication">
+          <div class="art"><div class="a-in"><span class="a-sm" style="margin:0 0 10px">ART DIRECTION</span><span class="a-big" style="font-size:clamp(24px,2.8vw,38px)">One grid,<br>many voices.</span><div class="a-rule"></div><span class="a-sm">Direction · sales material</span></div></div>
+          <div class="cap"><b>Art direction</b><span>Brand · Communication</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- ================================================================
+     VIEW — RESUME (printable)
+     ================================================================ -->
+<section class="view" id="view-resume" data-title="Resume — Sumedha Chouhan">
+
+  <div class="wrap rsm">
+    <div class="rsm-head">
+      <div>
+        <span class="m m--accent no-print">04 — Resume</span>
+        <h1 style="margin-top:12px">Sumedha Chouhan</h1>
+        <p class="rsm-sub">Product Designer — B2B · AI · Enterprise UX</p>
+        <p class="contact-line">Dubai, UAE &nbsp;·&nbsp; +91 8000376528 &nbsp;·&nbsp; sumedhachouhan.20@gmail.com &nbsp;·&nbsp; LinkedIn &nbsp;·&nbsp; Portfolio</p>
+      </div>
+      <button class="btn btn--solid no-print" id="printBtn">Print / Save as PDF <span class="arw">⎙</span></button>
+    </div>
+
+    <h2>Profile</h2>
+    <p class="prof">Product designer with 4 years of experience across B2B, AI and digital products — complex workflows, information-heavy dashboards and scalable design systems. Experienced in taking products from 0→1 through implementation, working closely with engineering and leadership to turn complex technical requirements into clear, usable experiences.</p>
+
+    <h2>Experience</h2>
+    <div class="rrow"><h3>Intozi Tech Pvt. Ltd. — UI/UX Designer</h3><span class="rdate">Mar 2023 — Present</span></div>
+    <p class="rmeta">Gurugram / Dubai — AI video analytics</p>
+    <ul>
+      <li>Led the <b>0→1 product design of Ikshana</b>, replacing 5–6 separate client dashboards with one unified AI video analytics platform.</li>
+      <li>Designed core product experiences across <b>AI application configuration, cameras, locations, events, alerts, servers, users and reporting</b> — supporting 100+ AI applications.</li>
+      <li>Consolidated workflows across <b>30–40 clients and 500+ deployments</b>, enabling existing clients to move from legacy dashboards to the unified platform.</li>
+      <li>Built the product's <b>design system</b> and currently lead its redesign, improving consistency, scalability and efficiency across the dashboard.</li>
+      <li>Simplified complex multi-step technical workflows, contributing to a <b>26% reduction in development-phase errors</b>.</li>
+      <li>Worked closely with the <b>CTO and a 5–6 person frontend team</b> — from workflows and information architecture through implementation and design reviews.</li>
+      <li>Aligned design with product roadmaps alongside engineering and leadership, contributing to <b>~20% faster delivery</b>.</li>
+      <li>Mentor and review other designers; help set design direction across product, website and visual communication.</li>
+    </ul>
+
+    <div class="rrow" style="margin-top:30px"><h3>Mechanify — UI/UX Design Intern</h3><span class="rdate">Nov 2022 — Jan 2023</span></div>
+    <p class="rmeta">Bike-service startup — sole designer</p>
+    <ul>
+      <li>Worked as <b>sole designer</b>, leading the redesign of the mobile product and its key user journeys.</li>
+      <li>Partnered directly with founders and developers to turn early ideas into structured flows and final UI.</li>
+      <li>Created <b>45+ interactive prototypes</b> to explore, communicate and validate ideas before development.</li>
+      <li>Designed the product's <b>information architecture, user flows and interface</b>, establishing a consistent visual language.</li>
+    </ul>
+
+    <h2>Selected Work</h2>
+    <div class="rrow"><h3>Bike Service Platform — Product Design · Mobile &amp; Web</h3><span class="rdate">2022–23</span></div>
+    <ul>
+      <li>Designed rider and garage-manager experiences as sole designer — <b>design system, payments, vehicle documents, insurance tracking, memberships and service workflows</b>; explored an e-commerce experience for accessories.</li>
+    </ul>
+    <div class="rrow" style="margin-top:22px"><h3>UAE Physiotherapy &amp; Wellness App — Product Design · Mobile</h3><span class="rdate">UAE</span></div>
+    <ul>
+      <li>Designed a customer-facing mobile experience for discovering and booking <b>at-home physiotherapy services</b> for a UAE-based client.</li>
+    </ul>
+
+    <h2>Skills</h2>
+    <div class="skills">
+      <p><b>Product —</b> Product Design · Enterprise UX · 0→1 Product Development · Information Architecture · User Flows · Dashboard Design</p>
+      <p><b>UX / UI —</b> Interaction Design · Wireframing · Prototyping · Usability Testing · UI Design · Data-heavy Interfaces · Design Reviews</p>
+      <p><b>Systems —</b> Design Systems · Component Libraries · Design Tokens · Design System Governance · Responsive Design</p>
+      <p><b>Leadership —</b> Design Direction · Mentoring · Stakeholder Collaboration · Developer Collaboration</p>
+      <p><b>Visual —</b> Visual Communication · Marketing Design · Presentation Design · Web Design · Social Media Design</p>
+      <p><b>Tools —</b> Figma · FigJam · Adobe Creative Suite</p>
+    </div>
+
+    <h2>Education</h2>
+    <div class="rrow"><h3>B.Sc. — Physics, Mathematics &amp; Computer Science</h3><span class="rdate">2018–2021</span></div>
+    <p class="rmeta">Maharaja Ganga Singh University, Bikaner</p>
+    <div class="rrow" style="margin-top:20px"><h3>Google UX Design Professional Certificate</h3><span class="rdate">2022</span></div>
+    <p class="rmeta">Coursera</p>
+  </div>
+
+</section>
+</main>
+
+<!-- ================================================================
+     FOOTER — CONTACT
+     ================================================================ -->
+<footer id="contact">
+  <div class="wrap f-in">
+    <span class="m k">05 — Contact &nbsp;·&nbsp; Dubai, UAE</span>
+    <h2 class="big">Let's work<br><em>together.</em></h2>
+    <span class="m k" style="display:block;margin-top:14px">Senior Product Designer · UI/UX · Design Lead — open to UAE-based opportunities</span>
+
+    <div class="f-grid">
+      <div>
+        <h5>Start a conversation</h5>
+        <p>The fastest way to reach me is email. I reply within a day — usually with questions, because good work starts with them.</p>
+      </div>
+      <div>
+        <h5>Direct</h5>
+        <ul class="f-list">
+          <li><button class="copybtn" id="copyEmail" data-email="sumedhachouhan.20@gmail.com">sumedhachouhan.20@gmail.com <span class="m" id="copyState" style="color:#7CC79B"></span></button></li>
+          <li><a href="tel:+918000376528">+91 80003 76528</a></li>
+          <!-- TODO: add real LinkedIn URL -->
+          <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Elsewhere</h5>
+        <ul class="f-list">
+          <li><a href="#/resume">Resume — print / PDF</a></li>
+          <li><a href="#/work/ikshana">Case study: Ikshana</a></li>
+          <li><a href="#/work/bike">Case study: Bike Platform</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="colophon">
+      <span>© 2026 Sumedha Chouhan — designed &amp; built as a single HTML file</span>
+      <span>Set in Fraunces · Instrument Sans · IBM Plex Mono — every diagram hand-drawn, reconstructed &amp; anonymized</span>
+    </div>
+  </div>
+</footer>
+
+<style>
+/* JS-panel helper: filter-bar highlight zone for the annotated table */
+#ant-filterbar.hl-c{box-shadow:inset 0 0 0 1.5px var(--accent);background:rgba(232,71,28,.08)}
+</style>
+
+<script>
+/* ============================================================
+   ENGINE — vanilla, no dependencies
+   ============================================================ */
+(function(){
+'use strict';
+const $  = (s,c)=> (c||document).querySelector(s);
+const $$ = (s,c)=> Array.from((c||document).querySelectorAll(s));
+
+/* ---------- router ---------- */
+const VIEWS = ['home','ikshana','bike','wellness','visual','resume'];
+let current = null;
+
+function scrollToId(id){
+  const el = document.getElementById(id);
+  if(el) setTimeout(()=>el.scrollIntoView({behavior:'smooth'}),60);
+}
+function showView(name){
+  if(current === name) return;
+  VIEWS.forEach(v=>{
+    const el = document.getElementById('view-'+v);
+    if(el) el.classList.toggle('active', v===name);
+  });
+  current = name;
+  document.body.dataset.view = name;
+  const el = document.getElementById('view-'+name);
+  if(el && el.dataset.title) document.title = el.dataset.title;
+  window.scrollTo({top:0,behavior:'auto'});
+  // nav active state
+  const navKey = (name==='ikshana'||name==='bike'||name==='wellness') ? 'work' : name;
+  $$('.navlinks a').forEach(a=> a.classList.toggle('on', a.dataset.nav===navKey));
+}
+function route(){
+  const h = location.hash || '#/';
+  if(!h.startsWith('#/')) return;               // in-page anchor — let it scroll
+  const p = h.slice(1).replace(/\/+$/,'');     // '/work/ikshana'
+  switch(true){
+    case p==='' || p==='/':                       showView('home');     break;
+    case p==='/work':                             showView('home'); scrollToId('work');    break;
+    case p==='/about':                            showView('home'); scrollToId('about');   break;
+    case p==='/contact':                          scrollToId('contact');                   break;
+    case p==='/visual':                           showView('visual');                     break;
+    case p==='/resume':                           showView('resume');                     break;
+    case p==='/work/ikshana':                     showView('ikshana');                    break;
+    case p==='/work/bike':                        showView('bike');                       break;
+    case p==='/work/wellness':                    showView('wellness');                   break;
+    default:                                      showView('home');
+  }
+}
+window.addEventListener('hashchange', route);
+route();
+
+/* ---------- scroll progress ---------- */
+const prog = $('#progress');
+addEventListener('scroll', ()=>{
+  const d = document.documentElement;
+  const max = d.scrollHeight - innerHeight;
+  prog.style.width = (max>0 ? (d.scrollTop/max)*100 : 0) + '%';
+}, {passive:true});
+
+/* ---------- reveal on scroll ---------- */
+const io = new IntersectionObserver(entries=>{
+  entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+},{threshold:.12,rootMargin:'0px 0px -6% 0px'});
+$$('.rv').forEach(el=>io.observe(el));
+
+/* ---------- counters ---------- */
+const cio = new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(!e.isIntersecting) return;
+    const el = e.target; cio.unobserve(el);
+    const to = parseInt(el.dataset.to,10), t0 = performance.now(), dur = 1300;
+    (function tick(t){
+      const k = Math.min((t-t0)/dur,1), ease = 1-Math.pow(1-k,3);
+      el.textContent = Math.round(to*ease);
+      if(k<1) requestAnimationFrame(tick);
+    })(t0);
+  });
+},{threshold:.6});
+$$('.count').forEach(el=>cio.observe(el));
+
+/* ---------- home rail ---------- */
+const railLinks = $$('.rail a');
+const rio = new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      railLinks.forEach(a=>a.classList.toggle('on', a.dataset.rail===e.target.id.replace('visual-teaser','visual')));
+    }
+  });
+},{threshold:.3});
+['hero','work','visual-teaser','about','process'].forEach(id=>{
+  const el=document.getElementById(id); if(el) rio.observe(el);
+});
+
+/* ---------- system map ---------- */
+const NODE_INFO = {
+  clients:   'Clients — tenants of the platform. Each brings different deployments, roles and configuration needs.',
+  locations: 'Locations — physical sites. A client can have one or many; every camera belongs to exactly one.',
+  cameras:   'Cameras — the data sources. Hundreds per client, each running one or more AI applications.',
+  servers:   'Servers — edge and cloud infrastructure the AI applications run on.',
+  apps:      'AI applications — 100+ of them. ANPR, intrusion, PPE check… configured per camera.',
+  events:    'Events — what the system produces: detections with source, type, time and evidence.',
+  alerts:    'Alerts — events that crossed a rule threshold and now need a human.',
+  users:     'Users — operators, admins, viewers. Different permissions, different views of one system.',
+  reports:   'Reports — where events come back together as operational insight.'
+};
+(function(){
+  const map = $('#sysmap'); if(!map) return;
+  const cap = $('#mapcap'), capDefault = cap.innerHTML;
+  const nodes = $$('.node',map), links = $$('.link',map);
+  function light(node){
+    map.classList.add('focused'); node.classList.add('lit');
+    links.forEach(l=>{ if(l.dataset.a===node.dataset.node || l.dataset.b===node.dataset.node) l.classList.add('lit'); });
+    cap.innerHTML = '<b>' + node.dataset.node.charAt(0).toUpperCase()+node.dataset.node.slice(1) + '</b> — ' + (NODE_INFO[node.dataset.node]||'').split('—').slice(1).join('—').trim();
+  }
+  function dim(){
+    map.classList.remove('focused');
+    nodes.forEach(n=>n.classList.remove('lit'));
+    links.forEach(l=>l.classList.remove('lit'));
+    cap.innerHTML = capDefault;
+  }
+  nodes.forEach(n=>{
+    n.addEventListener('mouseenter',()=>light(n));
+    n.addEventListener('mouseleave',dim);
+    n.addEventListener('focus',()=>light(n));
+    n.addEventListener('blur',dim);
+  });
+})();
+
+/* ---------- event demo ---------- */
+(function(){
+  const root = $('#evdemo'); if(!root) return;
+  const rowsEl = $('#evd-rows'), countEl = $('#evd-count'), emptyEl = $('#evd-empty'),
+        resetBtn = $('#evd-reset'), searchEl = $('#evd-search');
+  const DATA = [
+    {id:'EVT-2841',cam:'Gate 2 — In', app:'ANPR',      type:'Vehicle',ic:'v',time:'14:02:11',st:'new'},
+    {id:'EVT-2840',cam:'Lobby',       app:'Loitering', type:'Person', ic:'p',time:'13:58:47',st:'ack'},
+    {id:'EVT-2839',cam:'Perimeter N', app:'Intrusion', type:'Person', ic:'p',time:'13:51:02',st:'new'},
+    {id:'EVT-2838',cam:'Loading Bay', app:'PPE Check', type:'Person', ic:'p',time:'13:44:29',st:'res'},
+    {id:'EVT-2837',cam:'Gate 2 — Out',app:'ANPR',      type:'Vehicle',ic:'v',time:'13:40:15',st:'res'},
+    {id:'EVT-2836',cam:'Lobby',       app:'ANPR',      type:'Vehicle',ic:'v',time:'13:31:54',st:'ack'},
+    {id:'EVT-2835',cam:'Perimeter S', app:'Intrusion', type:'Object', ic:'o',time:'13:22:08',st:'res'},
+    {id:'EVT-2834',cam:'Loading Bay', app:'Loitering', type:'Person', ic:'p',time:'13:15:36',st:'new'},
+    {id:'EVT-2833',cam:'Gate 2 — In', app:'ANPR',      type:'Vehicle',ic:'v',time:'13:02:44',st:'res'},
+    {id:'EVT-2832',cam:'Lobby',       app:'PPE Check', type:'Person', ic:'p',time:'12:58:19',st:'res'},
+    {id:'EVT-2831',cam:'Perimeter N', app:'Loitering', type:'Person', ic:'p',time:'12:47:02',st:'ack'},
+    {id:'EVT-2830',cam:'Gate 1',      app:'ANPR',      type:'Vehicle',ic:'v',time:'12:41:57',st:'res'}
+  ];
+  const ST = {new:['new','New'],ack:['ack','Ack'],res:['res','Resolved']};
+  const state = {cam:new Set(), app:new Set(), type:new Set(), q:''};
+  let timer = null;
+
+  function match(row){
+    if(state.cam.size && !([...state.cam].some(v=>row.cam.indexOf(v)===0))) return false;
+    if(state.app.size && !([...state.app].some(v=>row.app.indexOf(v)===0))) return false;
+    if(state.type.size && !state.type.has(row.type)) return false;
+    if(state.q){
+      const hay = (row.id+' '+row.cam+' '+row.app+' '+row.type).toLowerCase();
+      if(hay.indexOf(state.q)===-1) return false;
+    }
+    return true;
+  }
+  function paint(){
+    const list = DATA.filter(match);
+    rowsEl.innerHTML = list.map((r,i)=>(
+      '<div class="evd-row" style="animation-delay:'+(i*35)+'ms">'+
+      '<span class="eid">'+r.id+'</span>'+
+      '<span class="ecam">'+r.cam+'</span>'+
+      '<span class="eapp">'+r.app+'</span>'+
+      '<span class="etyp"><i class="'+r.ic+'">'+r.ic.toUpperCase()+'</i>'+r.type+'</span>'+
+      '<span class="etme">'+r.time+'</span>'+
+      '<span><span class="st '+ST[r.st][0]+'">'+ST[r.st][1]+'</span></span>'+
+      '</div>'
+    )).join('');
+    countEl.innerHTML = 'Showing <b>'+list.length+'</b> of '+DATA.length+' events · filtered by '+
+      (state.cam.size+state.app.size+state.type.size+(state.q?1:0))+' filter'+(state.cam.size+state.app.size+state.type.size+(state.q?1:0)===1?'':'s');
+    root.classList.toggle('has-empty', list.length===0);
+  }
+  function apply(){                    // designed loading state, on purpose
+    root.classList.add('is-loading');
+    clearTimeout(timer);
+    timer = setTimeout(()=>{ root.classList.remove('is-loading'); paint(); }, 320);
+  }
+  root.addEventListener('click',e=>{
+    const chip = e.target.closest('.evd-chip[data-val]');
+    if(chip){
+      const dim = chip.closest('.evd-chips').dataset.dim;
+      const val = chip.dataset.val;
+      if(state[dim].has(val)){ state[dim].delete(val); chip.classList.remove('on'); }
+      else { state[dim].add(val); chip.classList.add('on'); }
+      apply();
+    }
+  });
+  searchEl.addEventListener('input',()=>{
+    state.q = searchEl.value.trim().toLowerCase();
+    apply();
+  });
+  resetBtn.addEventListener('click',()=>{
+    state.cam.clear(); state.app.clear(); state.type.clear(); state.q='';
+    searchEl.value='';
+    $$('.evd-chip.on',root).forEach(c=>c.classList.remove('on'));
+    apply();
+  });
+  paint();
+})();
+
+/* ---------- annotated table ---------- */
+(function(){
+  const list = $('#ant-list'); if(!list) return;
+  const bar = $('#ant-filterbar');
+  function on(z){
+    $$('li',list).forEach(li=>li.classList.toggle('on', li.dataset.zone===z));
+    $$('#view-ikshana .zone').forEach(el=>el.classList.toggle('hl-'+el.dataset.z, el.dataset.z===z));
+    if(bar) bar.classList.toggle('hl-c', z==='c');
+  }
+  $$('li',list).forEach(li=>{
+    li.addEventListener('mouseenter',()=>on(li.dataset.zone));
+    li.addEventListener('mouseleave',()=>on(null));
+  });
+})();
+
+/* ---------- design-system stack ---------- */
+(function(){
+  const layers = $$('#dsstack .dslayer'); if(!layers.length) return;
+  layers.forEach(l=>{
+    function toggle(){
+      const open = l.classList.contains('open');
+      layers.forEach(x=>x.classList.remove('open'));
+      if(!open) l.classList.add('open');
+    }
+    l.addEventListener('click',toggle);
+    l.addEventListener('keydown',e=>{ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); toggle(); } });
+  });
+})();
+
+/* ---------- before/after toggles ---------- */
+document.addEventListener('click',e=>{
+  const b = e.target.closest('.dt-switch button'); if(!b) return;
+  const card = b.closest('.dt-card');
+  card.dataset.state = b.dataset.s;
+  $$('.dt-switch button',card).forEach(x=>x.classList.toggle('on', x===b));
+});
+
+/* ---------- gallery filter ---------- */
+(function(){
+  const chips = $$('#galfilters .gchip'); if(!chips.length) return;
+  chips.forEach(c=>c.addEventListener('click',()=>{
+    chips.forEach(x=>x.classList.toggle('on', x===c));
+    const f = c.dataset.f;
+    $$('#gal .spec').forEach(s=>{
+      s.classList.toggle('hidden', f!=='all' && s.dataset.cat.indexOf(f)===-1);
+    });
+  }));
+})();
+
+/* ---------- copy email ---------- */
+(function(){
+  const btn = $('#copyEmail'); if(!btn) return;
+  btn.addEventListener('click',()=>{
+    const email = btn.dataset.email, state = $('#copyState');
+    function done(ok){
+      state.textContent = ok ? '✓ copied' : '';
+      setTimeout(()=>state.textContent='',2000);
+    }
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(email).then(()=>done(true)).catch(()=>done(false));
+    } else {
+      const ta=document.createElement('textarea'); ta.value=email; document.body.appendChild(ta);
+      ta.select(); try{document.execCommand('copy');done(true);}catch(_){done(false);} ta.remove();
+    }
+  });
+})();
+
+/* ---------- print resume ---------- */
+const pb = $('#printBtn'); if(pb) pb.addEventListener('click',()=>window.print());
+
+})();
+</script>
+</body>
+</html>
