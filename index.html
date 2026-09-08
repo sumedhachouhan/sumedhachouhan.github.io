@@ -327,11 +327,12 @@ footer h2.big em{font-style:italic;font-weight:340;color:#FF6B3D}
 .f-grid p{color:rgba(245,242,234,.75);font-size:15.5px;max-width:36ch}
 .f-list{list-style:none}
 .f-list li{margin-bottom:12px}
-.f-list a,.f-list button{color:rgba(245,242,234,.85);font-size:15.5px;display:inline-flex;gap:10px;align-items:baseline;border-bottom:1px solid transparent;transition:.25s}
+.f-list a,.f-list button{color:rgba(245,242,234,.85);font-size:15.5px;display:inline-flex;gap:10px;align-items:baseline;border-bottom:1px solid transparent;transition:.25s;flex-wrap:wrap;overflow-wrap:anywhere;max-width:100%}
 .f-list a:hover,.f-list button:hover{color:#FF6B3D;border-color:#FF6B3D}
 .copybtn{font-family:var(--sans)}
 .copybtn.ok{color:#7CC79B!important}
 .colophon{border-top:1px solid rgba(245,242,234,.14);padding:22px 0 26px;display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:rgba(245,242,234,.4)}
+.colophon span{min-width:0;max-width:100%}
 
 /* ============================================================
    CASE STUDY SHARED
@@ -702,6 +703,7 @@ footer h2.big em{font-style:italic;font-weight:340;color:#FF6B3D}
   .brand .dot{display:none}
   .navlinks{gap:4px}
   .navlinks a{font-size:7.5px;letter-spacing:.02em;padding:6px 0}
+  .f-list a,.f-list button{font-size:14px}
 }
 
 /* ---------- motion ---------- */
